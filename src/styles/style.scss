@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import-normalize; /* bring in normalize.css styles */
 
+:root {
+  --bg-color: #222;
+  --text-color: #fff;
+  --primary-color: #3b7fde;
+}
+
 body {
   font-family: Roboto, sans-serif;
+  background: var(--bg-color);
+  color: var(--primary-color);
 }
