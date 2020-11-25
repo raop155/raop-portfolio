@@ -3,7 +3,9 @@
 
 :root {
   --bg-color: #222;
+  --bg-color-light: #333;
   --text-color: #fff;
+  --gray-color: #999;
   --primary-color: #3b7fde;
 }
 
@@ -21,12 +23,17 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: var(--primary-color);
 }
 
 h2 {
   text-transform: uppercase;
+}
+
+h3 {
+  font-style: oblique;
 }
 
 a {
@@ -51,7 +58,7 @@ img {
 // Buttons
 .button {
   padding: 0.75em 2em;
-  color: #333;
+  color: var(--bg-color-light);
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -74,14 +81,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .grid {
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 100%;
   grid-template-columns: 1fr;
 }
 
@@ -91,7 +96,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background: #333;
+  background: var(--bg-color-light);
   height: 75px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 
@@ -171,7 +176,7 @@ img {
 
   i {
     font-size: 1rem;
-    color: #999;
+    color: var(--gray-color);
   }
 
   button {
@@ -185,22 +190,65 @@ img {
 // About me
 
 #about {
-  background: #333;
-  height: calc(100vh - 75px);
-  min-height: calc(100vh - 75px);
+  background: var(--bg-color-light);
+  // height: calc(100vh - 75px);
+  // min-height: calc(100vh - 75px);
+
+  h2,
+  h3 {
+    margin-top: 0;
+  }
 
   .container {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  h2 {
-    margin-top: 0;
+  .information {
+    flex-direction: column;
+    margin-bottom: 2em;
   }
 
   .image {
     margin: 0 auto;
     text-align: center;
     // width: 500px;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  .skills {
+    width: 100%;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+
+    .skill {
+      text-align: center;
+      padding: 1em;
+      min-width: 150px;
+      flex: 1 0 25%;
+
+      i {
+        height: 150px;
+      }
+
+      p {
+        text-align: center;
+        color: var(--gray-color);
+      }
+    }
+  }
+
+  @media (min-width: 760px) {
+    .information {
+      flex-direction: row;
+    }
+
+    .image {
+      min-width: 400px;
+      margin-left: 2em;
+    }
   }
 }

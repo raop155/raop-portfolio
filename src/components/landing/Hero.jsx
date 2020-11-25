@@ -12,7 +12,7 @@ const Hero = () => {
             product
           </i>
         </p>
-        <button class='button button--primary'>Contact Me</button>
+        <button className='button button--primary'>Contact Me</button>
       </div>
     </section>
   );
