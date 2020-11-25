@@ -13,22 +13,39 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Open Sans', sans-serif;
   background: var(--bg-color);
   color: var(--text-color);
 }
 
-h1 {
+h1,
+h2 {
   color: var(--primary-color);
+}
+
+h2 {
+  text-transform: uppercase;
 }
 
 a {
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 ul {
   list-style: none;
   padding: 0;
+}
+
+section {
+  padding: 3em 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 // Buttons
@@ -38,16 +55,17 @@ ul {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-}
 
-.button--primary {
-  background: var(--primary-color);
-  color: #fff;
+  &--primary {
+    background: var(--primary-color);
+    color: #fff;
+  }
 }
 
 // Utilities
 .container {
   width: 90%;
+  height: 100%;
   max-width: 1360px;
   margin: 0 auto;
 }
@@ -73,9 +91,9 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  // background: #333;
+  background: #333;
   height: 75px;
-  // box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 
   .container {
     justify-content: space-between;
@@ -121,7 +139,8 @@ ul {
 // Hero
 #hero {
   margin-top: 75px;
-  height: 50vh;
+  height: 100vh;
+  min-height: 100vh;
 
   .container {
     flex-direction: column;
@@ -133,7 +152,7 @@ ul {
   }
 
   h1 {
-    letter-spacing: 5px;
+    letter-spacing: 2.5px;
     padding: 0 0.5em;
     margin: 0 0 0.5em 0;
     font-size: 3rem;
@@ -160,5 +179,28 @@ ul {
     font-size: 1.15rem;
     margin-top: 2em;
     letter-spacing: 1px;
+  }
+}
+
+// About me
+
+#about {
+  background: #333;
+  height: calc(100vh - 75px);
+  min-height: calc(100vh - 75px);
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .image {
+    margin: 0 auto;
+    text-align: center;
+    // width: 500px;
   }
 }
