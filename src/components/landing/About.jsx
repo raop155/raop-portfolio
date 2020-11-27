@@ -25,7 +25,7 @@ const About = () => {
           <div className='description'>
             <p>
               I am currently working as a Front-end Developer at{' '}
-              <a href='https://www.px-group.com/' target='_blank'>
+              <a href='https://www.px-group.com/' rel="noreferrer" target='_blank'>
                 Px-Group
               </a>{' '}
               for 8+ years.

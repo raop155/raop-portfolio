@@ -11,7 +11,7 @@ const Footer = () => {
         <div className='social'>
           <ul className='flex'>
             <li>
-              <a href='https://github.com/raop155' target='_blank' className='link'>
+              <a href='https://github.com/raop155' rel="noreferrer" target='_blank' className='link'>
                 <i>
                   <FontAwesomeIcon icon={faGithub} size='2x' />
                 </i>
@@ -20,6 +20,7 @@ const Footer = () => {
             <li>
               <a
                 href='https://www.linkedin.com/in/ricardo-olarte-4a9b621b6/'
+                rel="noreferrer"
                 target='_blank'
                 className='link'
               >
@@ -29,7 +30,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href='https://twitter.com/raop155' target='_blank' className='link'>
+              <a href='https://twitter.com/raop155'  rel="noreferrer" target='_blank' className='link'>
                 <i>
                   <FontAwesomeIcon icon={faTwitter} size='2x' />
                 </i>
