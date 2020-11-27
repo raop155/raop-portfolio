@@ -9,7 +9,10 @@ import {
   faHtml5,
   faCss3,
   faVuejs,
+  faSass,
 } from '@fortawesome/free-brands-svg-icons';
+
+import { faFileCode, faCode, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
@@ -28,8 +31,8 @@ const About = () => {
               for 8+ years.
             </p>
             <p>
-              Well-organised person, responsible and a problem solver. Like videogames and father of
-              one boy.
+              Well-organised person, responsible and a problem solver. Like videogames, married and
+              father of one boy.
             </p>
             <p>
               Enthusiast in the entire Front-end spectrum, capable of working as a Full-stack
@@ -101,6 +104,34 @@ const About = () => {
               <FontAwesomeIcon icon={faDatabase} size='3x' />
             </i>
             <p>MySQL</p>
+          </div>
+
+          <div className='skill'>
+            <i>
+              <FontAwesomeIcon icon={faSass} size='3x' />
+            </i>
+            <p>Sass</p>
+          </div>
+
+          <div className='skill'>
+            <i>
+              <FontAwesomeIcon icon={faLaptopCode} size='3x' />
+            </i>
+            <p>Electron</p>
+          </div>
+
+          <div className='skill'>
+            <i>
+              <FontAwesomeIcon icon={faFileCode} size='3x' />
+            </i>
+            <p>jQuery</p>
+          </div>
+
+          <div className='skill'>
+            <i>
+              <FontAwesomeIcon icon={faCode} size='3x' />
+            </i>
+            <p>ActionScript</p>
           </div>
         </div>
       </div>

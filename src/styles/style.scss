@@ -31,6 +31,7 @@ h1,
 h2,
 h3 {
   color: var(--primary-color);
+  letter-spacing: 2.5px;
 }
 
 h2 {
@@ -142,7 +143,7 @@ img {
   .nav-item {
     color: var(--text-color);
     padding: 0.5em;
-    transition: box-shadow 250ms ease-out;
+    transition: box-shadow 550ms ease-out;
   }
 
   .nav-item:hover,
@@ -171,8 +172,8 @@ img {
     letter-spacing: 2.5px;
     padding: 0 0.5em;
     margin: 0 0 0.5em 0;
-    font-size: 3rem;
-    transition: box-shadow 250ms ease-out;
+    font-size: 2.75rem;
+    transition: box-shadow 550ms ease-out;
   }
 
   h1:hover {
@@ -181,27 +182,128 @@ img {
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
   }
 
   i {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--gray-color);
   }
 
-  button {
+  a {
     // text-transform: uppercase;
     font-size: 1.15rem;
     margin-top: 2em;
     letter-spacing: 1px;
   }
+
+  @media (min-width: 321px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    i {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Projects
+#projects {
+  background: var(--bg-color-light);
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+  .project-card {
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+
+    .image {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+    }
+
+    .information {
+      padding: 1em;
+
+      h3 {
+        font-style: normal;
+        margin: 0;
+        font-size: 1.1rem;
+        letter-spacing: normal;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+
+      p.company {
+        color: var(--gray-color);
+        margin: 0;
+        font-size: 0.65rem;
+      }
+
+      .links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .links .link {
+        // flex: 0 0 75px;
+        font-size: 0.8rem;
+        border: 1px solid var(--primary-color);
+        padding: 0.5em 1em;
+        margin: 0.5em;
+      }
+
+      .links .link:hover {
+        color: #fff;
+        border: 1px solid #fff;
+      }
+    }
+  }
+
+  // @media (min-width: 760px) {
+  //   .projects-container {
+  //     grid-template-columns: repeat(2, 1fr);
+  //   }
+  // }
+
+  // @media (min-width: 1024px) {
+  //   .projects-container {
+  //     grid-template-columns: repeat(3, 1fr);
+  //   }
+  // }
+
+  // @media (min-width: 1024px) {
+  //   .projects-container {
+  //     grid-template-columns: repeat(3, 1fr);
+  //   }
+  // }
 }
 
 // About me
-
 #about {
-  background: var(--bg-color-light);
+  // background: var(--bg-color-light);
   // height: calc(100vh - 75px);
   // min-height: calc(100vh - 75px);
 
@@ -291,9 +393,6 @@ img {
       margin-left: 2.5em;
     }
   }
-}
-
-#projects {
 }
 
 #contact {

@@ -12,7 +12,9 @@ const Hero = () => {
             product
           </i>
         </p>
-        <button className='button button--primary'>Contact Me</button>
+        <a href='#projects' className='button button--primary'>
+          PROJECTS
+        </a>
       </div>
     </main>
   );
