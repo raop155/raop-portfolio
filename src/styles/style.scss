@@ -14,6 +14,11 @@
   line-height: 1.5;
 }
 
+html {
+  scroll-padding-top: 75px; /* height of sticky header */
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -46,7 +51,12 @@ ul {
   padding: 0;
 }
 
+main,
 section {
+  padding: 3em 1em;
+}
+
+footer {
   padding: 3em 1em;
 }
 
@@ -99,6 +109,7 @@ img {
   background: var(--bg-color-light);
   height: 75px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  z-index: 999;
 
   .container {
     justify-content: space-between;
@@ -144,8 +155,8 @@ img {
 // Hero
 #hero {
   margin-top: 75px;
-  height: 100vh;
-  min-height: 100vh;
+  height: calc(100vh - 75px);
+  min-height: calc(100vh - 75px);
 
   .container {
     flex-direction: column;
@@ -210,9 +221,38 @@ img {
   }
 
   .image {
-    margin: 0 auto;
+    position: relative;
+    margin: 2em auto 0 auto;
     text-align: center;
     // width: 500px;
+    // box-shadow: 5px 5px 0px black;
+    z-index: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: -10px;
+      left: -10px;
+      background: var(--bg-color);
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      bottom: -10px;
+      right: -10px;
+      background: var(--bg-color);
+      z-index: -1;
+    }
+
+    img {
+      display: block;
+    }
   }
 
   p {
@@ -248,7 +288,28 @@ img {
 
     .image {
       min-width: 400px;
-      margin-left: 2em;
+      margin-left: 2.5em;
     }
+  }
+}
+
+#projects {
+}
+
+#contact {
+  background: var(--bg-color-light);
+}
+
+#footer {
+  text-align: center;
+
+  span {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  ul li {
+    padding: 0 1em;
   }
 }

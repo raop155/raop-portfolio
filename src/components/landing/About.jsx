@@ -2,9 +2,6 @@ import React from 'react';
 import AboutMeImage from '../../assets/about_me.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faGithub,
-  faLinkedin,
-  faTwitter,
   faJsSquare,
   faNode,
   faReact,

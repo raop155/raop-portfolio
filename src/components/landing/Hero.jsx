@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section id='hero'>
+    <main id='hero'>
       <div className='container flex'>
         <h1>I'm Ricardo</h1>
         <p>Full-stack Developer focused on Front-end development</p>
@@ -14,7 +14,7 @@ const Hero = () => {
         </p>
         <button className='button button--primary'>Contact Me</button>
       </div>
-    </section>
+    </main>
   );
 };
 
