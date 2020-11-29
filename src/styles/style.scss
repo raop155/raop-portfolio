@@ -249,13 +249,15 @@ img {
 
     span {
       position: absolute;
-      top: 0;
-      right: 0;
-      padding: 0.5em 0.75em;
-      background: var(--primary-color);
-      // border-top-left-radius: 5px;
-      // border-bottom-left-radius: 5px;
-      font-size: 0.8rem;
+      top: 7.5px;
+      right: 7.5px;
+      padding: 0.5em 1em;
+      // background: var(--primary-color);
+      background: rgba(0, 0, 0, 0.75);
+      // border-top-left-radius: 10px;
+      // border-bottom-left-radius: 10px;
+      border-radius: 10px;
+      font-size: 0.7rem;
     }
 
     span:hover {
@@ -304,6 +306,11 @@ img {
         border: 1px solid var(--primary-color);
         padding: 0.5em 1em;
         margin: 0.5em;
+      }
+
+      .links .link--yellow {
+        border: 1px solid #f8d210;
+        color: #f8d210;
       }
 
       .links .link:hover {
