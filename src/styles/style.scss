@@ -27,6 +27,17 @@ body {
   color: var(--text-color);
 }
 
+label {
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  padding: 0.5em 0.75em;
+}
+
 h1,
 h2,
 h3 {
@@ -218,6 +229,7 @@ img {
   background: var(--bg-color-light);
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
 
   .projects-container {
     display: grid;
@@ -322,9 +334,11 @@ img {
 
 // About me
 #about {
-  // background: var(--bg-color-light);
+  background: var(--bg-color);
   // height: calc(100vh - 75px);
   // min-height: calc(100vh - 75px);
+  position: relative;
+  z-index: 9;
 
   h2,
   h3 {
@@ -356,7 +370,7 @@ img {
       height: 50%;
       top: -10px;
       left: -10px;
-      background: var(--bg-color);
+      background: var(--bg-color-light);
       z-index: -1;
     }
 
@@ -367,7 +381,7 @@ img {
       height: 50%;
       bottom: -10px;
       right: -10px;
-      background: var(--bg-color);
+      background: var(--bg-color-light);
       z-index: -1;
     }
 
@@ -414,11 +428,39 @@ img {
   }
 }
 
+// Contact
 #contact {
   background: var(--bg-color-light);
+  padding: 0;
+
+  .container {
+    padding: 3em 1em;
+  }
+
+  .arrow-down {
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+  }
+
+  #form {
+    .form-group {
+      margin: 1em 0;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+    }
+
+    .button {
+      letter-spacing: 1px;
+      display: block;
+      margin-left: auto;
+    }
+  }
 }
 
 #footer {
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
   text-align: center;
 
   span {
