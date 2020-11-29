@@ -216,6 +216,8 @@ img {
 // Projects
 #projects {
   background: var(--bg-color-light);
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 
   .projects-container {
     display: grid;
@@ -228,9 +230,26 @@ img {
   }
 
   .project-card {
+    position: relative;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     overflow: hidden;
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5em 0.75em;
+      background: var(--primary-color);
+      // border-top-left-radius: 5px;
+      // border-bottom-left-radius: 5px;
+      font-size: 0.8rem;
+    }
+
+    span:hover {
+      background: #fff;
+      color: var(--primary-color);
+    }
 
     .image {
       width: 100%;
