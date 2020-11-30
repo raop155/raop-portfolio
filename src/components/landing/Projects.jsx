@@ -3,24 +3,24 @@ import ProjectCard from '../projects/ProjectCard';
 
 const projects = [
   {
-    title: 'Self-service Kiosk',
-    image: 'about_me.jpeg',
-    small_description: 'Small description',
-    description: 'Description',
+    title: 'Self-service Kiosk | Work Café',
+    image: 'workcafe.JPG',
+    small_description: "Work Café, Santander's innovative branch concept",
+    description: "Work Café, Santander's innovative branch concept",
     company: {
       name: 'Santander',
-      url: 'https://banco.santander.cl/',
+      url: 'https://www.santander.com/en/stories/work-cafe-santanders-innovative-branch-concept',
       country: 'Chile',
     },
-    featured: true,
-    private: true,
+    isFeatured: true,
+    isPrivate: true,
     video: {
       url: '#!',
     },
   },
   {
     title: 'Self-service Kiosk',
-    image: 'about_me.jpeg',
+    image: 'scotiabank.JPG',
     small_description: 'Small description',
     description: 'Description',
     company: {
@@ -28,15 +28,15 @@ const projects = [
       url: 'https://www.scotiabankchile.cl/',
       country: 'Chile',
     },
-    featured: true,
-    private: true,
+    isFeatured: true,
+    isPrivate: true,
     video: {
       url: '#!',
     },
   },
   {
     title: 'Self-service Kiosk',
-    image: 'about_me.jpeg',
+    image: 'werking.JPG',
     small_description: 'Small description',
     description: 'Description',
     company: {
@@ -44,15 +44,15 @@ const projects = [
       url: 'https://www.werking.com/',
       country: 'Paraguay',
     },
-    featured: true,
-    private: true,
+    isFeatured: true,
+    isPrivate: true,
     video: {
       url: '#!',
     },
   },
   {
     title: 'Self-service Kiosk',
-    image: 'about_me.jpeg',
+    image: 'claro.JPG',
     small_description: 'Small description',
     description: 'Description',
     company: {
@@ -60,16 +60,16 @@ const projects = [
       url: 'https://www.claro.com.pe/',
       country: 'Perú',
     },
-    featured: true,
-    private: true,
+    isFeatured: true,
+    isPrivate: true,
     video: {
       url: '#!',
     },
   },
 
   {
-    title: 'Queue Dashboard',
-    image: 'about_me.jpeg',
+    title: 'Queue & Statistics Dashboard',
+    image: 'workcafe-dashboard.JPG',
     small_description: 'Small description',
     description: 'Description',
     company: {
@@ -77,8 +77,8 @@ const projects = [
       url: 'https://banco.santander.cl/',
       country: 'Chile',
     },
-    featured: true,
-    private: true,
+    isFeatured: true,
+    isPrivate: true,
     video: {
       url: '#!',
     },
@@ -86,7 +86,7 @@ const projects = [
 
   {
     title: 'Wheather & Video Player',
-    image: 'about_me.jpeg',
+    image: 'werking-wheather.JPG',
     small_description: 'Small description',
     description: 'Description',
     company: {
@@ -94,16 +94,16 @@ const projects = [
       url: 'https://www.werking.com/',
       country: 'Paraguay',
     },
-    featured: true,
-    private: true,
+    isFeatured: true,
+    isPrivate: true,
     video: {
       url: '#!',
     },
   },
 
   {
-    title: 'Statistic Dashboard',
-    image: 'about_me.jpeg',
+    title: 'Statistics Dashboard',
+    image: 'werking-dashboard.JPG',
     small_description: 'Small description',
     description: 'Description',
     company: {
@@ -111,49 +111,88 @@ const projects = [
       url: 'https://www.werking.com/',
       country: 'Paraguay',
     },
-    featured: true,
-    private: true,
+    isFeatured: true,
+    isPrivate: true,
     video: {
       url: '#!',
     },
   },
 
   {
-    title: 'Project Title',
-    image: 'about_me.jpeg',
+    title: 'Personal Portfolio',
+    image: 'portfolio.JPG',
     small_description: 'Small description',
     description: 'Description',
     company: {
-      name: 'Company Name',
-      url: '#!',
-      country: 'Company Country',
+      name: 'Ricardo Olarte',
+      url: '#about',
+      country: 'Perú',
     },
-    featured: false,
-    private: false,
+    isFeatured: true,
+    isPrivate: false,
     live: {
-      url: '#!',
+      url: 'https://raop155.com',
     },
     code: {
-      url: '#!',
+      url: 'https://github.com/raop155/raop-portfolio',
     },
   },
   {
-    title: 'Project Title',
-    image: 'about_me.jpeg',
+    title: 'Loruki',
+    image: 'loruki.JPG',
     small_description: 'Small description',
     description: 'Description',
     company: {
-      name: 'Company Name',
-      url: '#!',
-      country: 'Company Country',
+      name: 'Ricardo Olarte',
+      url: '#about',
+      country: 'Perú',
     },
-    featured: false,
-    private: false,
+    isFeatured: false,
+    isPrivate: false,
     live: {
-      url: '#!',
+      url: 'https://vibrant-gates-241c61.netlify.app/',
     },
     code: {
-      url: '#!',
+      url: 'https://github.com/raop155/saas-template',
+    },
+  },
+  {
+    title: 'La Casita Chaupin',
+    image: 'lacasitachaupin.JPG',
+    small_description: 'Web with downloadable menu for a small eco-restaurant from Chavin - Perú',
+    description: 'Web with downloadable menu for a small eco-restaurant from Chavin - Perú',
+    company: {
+      name: 'La Casita Chaupin',
+      url: 'https://www.facebook.com/La-Casita-Chaupin-345688692166796/',
+      country: 'Perú',
+    },
+    isFeatured: false,
+    isPrivate: false,
+    live: {
+      url: 'https://elated-hodgkin-9360e3.netlify.app/#/',
+    },
+    code: {
+      url: 'https://github.com/raop155/la-casita-chaupin',
+    },
+  },
+
+  {
+    title: 'Star Wars API',
+    image: 'starwars.JPG',
+    small_description: '',
+    description: '',
+    company: {
+      name: 'Ricardo Olarte',
+      url: '#about',
+      country: 'Perú',
+    },
+    isFeatured: false,
+    isPrivate: false,
+    live: {
+      url: 'https://pensive-jennings-f29536.netlify.app/',
+    },
+    code: {
+      url: 'https://github.com/raop155/starwars',
     },
   },
 ];

@@ -1,8 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ProjectCard = (props) => {
   const { project } = props;
-  const { title, image, small_description, company, featured, live, code, video } = project;
+  const {
+    title,
+    image,
+    small_description,
+    company,
+    isFeatured,
+    isPrivate,
+    live,
+    code,
+    video,
+  } = project;
   const { name: companyName, country: companyCountry, url: companyURL } = company;
   const { url: urlLive } = live || {};
   const { url: urlCode } = code || {};
@@ -22,32 +33,36 @@ const ProjectCard = (props) => {
         </p>
         <p>{small_description}</p>
         <div className='links flex'>
-          {featured && (
+          {isFeatured && (
             <a className='link link--yellow' href='#!'>
               Featured
             </a>
           )}
 
           {live && (
-            <a className='link' href={urlLive}>
+            <a className='link' href={urlLive} target='_blank' rel='noreferrer'>
               Live
             </a>
           )}
           {code && (
-            <a className='link' href={urlCode}>
+            <a className='link' href={urlCode} target='_blank' rel='noreferrer'>
               Code
             </a>
           )}
           {video && (
-            <a className='link' href={urlVideo}>
+            <a className='link' href={urlVideo} target='_blank' rel='noreferrer'>
               Video
             </a>
           )}
         </div>
       </div>
-      {project.private && <span>Private</span>}
+      {isPrivate && <span>Private</span>}
     </div>
   );
+};
+
+ProjectCard.propTypes = {
+  project: PropTypes.object.isRequired,
 };
 
 export default ProjectCard;

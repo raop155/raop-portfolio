@@ -233,7 +233,7 @@ img {
 
   .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1em;
 
     h3 {
@@ -242,9 +242,10 @@ img {
   }
 
   .project-card {
+    // background: #222;
     position: relative;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     overflow: hidden;
 
     span {
@@ -320,11 +321,11 @@ img {
     }
   }
 
-  // @media (min-width: 760px) {
-  //   .projects-container {
-  //     grid-template-columns: repeat(2, 1fr);
-  //   }
-  // }
+  @media (min-width: 321px) {
+    .projects-container {
+      grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    }
+  }
 
   // @media (min-width: 1024px) {
   //   .projects-container {
