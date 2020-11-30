@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectCard from '../projects/ProjectCard';
 
 const projects = [
   {
@@ -165,46 +166,7 @@ const Projects = () => {
 
         <div className='projects-container'>
           {projects.length &&
-            projects.map((project, index) => (
-              <div className='project-card' key={index}>
-                <div className='image'>
-                  <img src={require(`../../assets/${project.image}`).default} alt={project.image} />
-                </div>
-                <div className='information'>
-                  <h3>{project.title}</h3>
-                  <p className='company'>
-                    <a href={project.company.url} rel='noreferrer' target='_blank'>
-                      {project.company.name} - {project.company.country}
-                    </a>
-                  </p>
-                  <p>{project.small_description}</p>
-                  <div className='links flex'>
-                    {project.featured && (
-                      <a className='link link--yellow' href='#!'>
-                        Featured
-                      </a>
-                    )}
-
-                    {project.live && (
-                      <a className='link' href={project.live.url}>
-                        Live
-                      </a>
-                    )}
-                    {project.code && (
-                      <a className='link' href={project.code.url}>
-                        Code
-                      </a>
-                    )}
-                    {project.video && (
-                      <a className='link' href={project.video.url}>
-                        Video
-                      </a>
-                    )}
-                  </div>
-                </div>
-                {project.private && <span>Private</span>}
-              </div>
-            ))}
+            projects.map((project, index) => <ProjectCard key={index} project={project} />)}
 
           {}
         </div>
