@@ -21,7 +21,7 @@ const projects = [
   {
     title: 'Self-service Kiosk',
     image: 'scotiabank.JPG',
-    small_description: 'Small description',
+    small_description: 'Modular System integration with various services integrations for clients',
     description: 'Description',
     company: {
       name: 'Scotiabank',
@@ -37,7 +37,7 @@ const projects = [
   {
     title: 'Self-service Kiosk',
     image: 'werking.JPG',
-    small_description: 'Small description',
+    small_description: 'Modular System integration with various services integrations for clients',
     description: 'Description',
     company: {
       name: 'Werking by Credicentro',
@@ -53,7 +53,7 @@ const projects = [
   {
     title: 'Self-service Kiosk',
     image: 'claro.JPG',
-    small_description: 'Small description',
+    small_description: 'Modular System integration',
     description: 'Description',
     company: {
       name: 'Claro',
@@ -70,7 +70,7 @@ const projects = [
   {
     title: 'Queue & Statistics Dashboard',
     image: 'workcafe-dashboard.JPG',
-    small_description: 'Small description',
+    small_description: 'Queue & Stadistic System',
     description: 'Description',
     company: {
       name: 'Santander',
@@ -87,7 +87,7 @@ const projects = [
   {
     title: 'Wheather & Video Player',
     image: 'werking-wheather.JPG',
-    small_description: 'Small description',
+    small_description: 'Video Player and Wheather API integration',
     description: 'Description',
     company: {
       name: 'Werking by Credicentro',
@@ -104,7 +104,7 @@ const projects = [
   {
     title: 'Statistics Dashboard',
     image: 'werking-dashboard.JPG',
-    small_description: 'Small description',
+    small_description: "Web App with Werking's Self-service Kiosk stadistic records",
     description: 'Description',
     company: {
       name: 'Werking by Credicentro',
@@ -121,7 +121,7 @@ const projects = [
   {
     title: 'Personal Portfolio',
     image: 'portfolio.JPG',
-    small_description: 'Small description',
+    small_description: "Ricardo Olarte's Personal Portfolio",
     description: 'Description',
     company: {
       name: 'Ricardo Olarte',
@@ -140,7 +140,7 @@ const projects = [
   {
     title: 'Loruki',
     image: 'loruki.JPG',
-    small_description: 'Small description',
+    small_description: "Saas's Landing Page",
     description: 'Description',
     company: {
       name: 'Ricardo Olarte',
@@ -175,11 +175,10 @@ const projects = [
       url: 'https://github.com/raop155/la-casita-chaupin',
     },
   },
-
   {
     title: 'Star Wars API',
     image: 'starwars.JPG',
-    small_description: '',
+    small_description: 'Small Web App with Star Wars planets & people',
     description: '',
     company: {
       name: 'Ricardo Olarte',
@@ -195,6 +194,104 @@ const projects = [
       url: 'https://github.com/raop155/starwars',
     },
   },
+
+  {
+    title: 'Finantial Indicators | CENEFA',
+    image: 'hub-cenefa.JPG',
+    small_description: 'Web App with financial indicators for premium clients',
+    description: '',
+    company: {
+      name: 'Santander',
+      url: 'https://banco.santander.cl/',
+      country: 'Chile',
+    },
+    isFeatured: false,
+    isPrivate: false,
+    live: {
+      url: 'https://trusting-kepler-8e9a66.netlify.app/',
+    },
+    code: {
+      url: 'https://github.com/raop155/hub-cenefa',
+    },
+  },
+
+  {
+    title: 'Finantial Indicators | Dashboard',
+    image: 'hub-dashboard.JPG',
+    small_description: 'Web App with financial indicators for premium clients',
+    description: '',
+    company: {
+      name: 'Santander',
+      url: 'https://banco.santander.cl/',
+      country: 'Chile',
+    },
+    isFeatured: false,
+    isPrivate: false,
+    live: {
+      url: 'https://epic-montalcini-4ad150.netlify.app/',
+    },
+    code: {
+      url: 'https://github.com/raop155/hub-dashboard',
+    },
+  },
+
+  {
+    title: 'Arturo Prat | Infographic',
+    image: 'wall-prat.JPG',
+    small_description: 'Arturo Prat small infographic for education purpose',
+    description: '',
+    company: {
+      name: 'Santander',
+      url: 'https://banco.santander.cl/',
+      country: 'Chile',
+    },
+    isFeatured: false,
+    isPrivate: false,
+    live: {
+      url: 'https://5fcaa386c3b2d8129cfa990b--compassionate-torvalds-2aff15.netlify.app/#/',
+    },
+    code: {
+      url: 'https://github.com/raop155/santander-wall-touch-prat',
+    },
+  },
+  {
+    title: 'Expensify App',
+    image: 'expensify.JPG',
+    small_description: 'Expensify App where you can record your expenses',
+    description: 'Expensify App where you can record your expenses',
+    company: {
+      name: 'Ricardo Olarte',
+      url: '#about',
+      country: 'Perú',
+    },
+    isFeatured: false,
+    isPrivate: false,
+    live: {
+      url: 'https://bugdet-app.herokuapp.com/',
+    },
+    code: {
+      url: 'https://github.com/raop155/budget-app',
+    },
+  },
+  {
+    title: 'Shopping List App',
+    image: 'shoppinglist.JPG',
+    small_description: 'Small Web App with shared shopping list',
+    description: '',
+    company: {
+      name: 'Ricardo Olarte',
+      url: '#about',
+      country: 'Perú',
+    },
+    isFeatured: false,
+    isPrivate: false,
+    live: {
+      url: 'https://shopping-list-mern-production.herokuapp.com/',
+    },
+    code: {
+      url: 'https://github.com/raop155/mern_shopping_list',
+    },
+  },
 ];
 
 const Projects = () => {
@@ -206,8 +303,6 @@ const Projects = () => {
         <div className='projects-container'>
           {projects.length &&
             projects.map((project, index) => <ProjectCard key={index} project={project} />)}
-
-          {}
         </div>
       </div>
     </section>
