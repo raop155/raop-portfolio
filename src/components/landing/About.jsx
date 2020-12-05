@@ -12,9 +12,7 @@ import {
   faSass,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { faFileCode, faCode, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+import { faFileCode, faCode, faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   return (
@@ -25,7 +23,7 @@ const About = () => {
           <div className='description'>
             <p>
               I am currently working as a Front-end Developer at{' '}
-              <a href='https://www.px-group.com/' rel="noreferrer" target='_blank'>
+              <a href='https://www.px-group.com/' rel='noreferrer' target='_blank'>
                 Px-Group
               </a>{' '}
               for 8+ years.

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectCard = (props) => {
   const { project } = props;
@@ -56,7 +58,11 @@ const ProjectCard = (props) => {
           )}
         </div>
       </div>
-      {isPrivate && <span>Private</span>}
+      {isPrivate && (
+        <span>
+          <FontAwesomeIcon icon={faLock} size='1x' />
+        </span>
+      )}
     </div>
   );
 };

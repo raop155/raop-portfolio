@@ -247,18 +247,24 @@ img {
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    transition: transform 500ms;
 
     span {
       position: absolute;
-      top: 7.5px;
-      right: 7.5px;
-      padding: 0.5em 1em;
+      top: 5px;
+      right: 5px;
+      padding: 1.5em;
+      width: 25px;
+      height: 25px;
       // background: var(--primary-color);
       background: rgba(0, 0, 0, 0.75);
       // border-top-left-radius: 10px;
       // border-bottom-left-radius: 10px;
-      border-radius: 10px;
+      border-radius: 50%;
       font-size: 0.7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     span:hover {
@@ -319,6 +325,11 @@ img {
         border: 1px solid #fff;
       }
     }
+  }
+
+  .project-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
   }
 
   @media (min-width: 321px) {
