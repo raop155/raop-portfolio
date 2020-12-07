@@ -7,6 +7,7 @@
   --text-color: #fff;
   --gray-color: #999;
   --primary-color: #3b7fde;
+  --yellow-color: #f8d210;
 }
 
 * {
@@ -260,7 +261,7 @@ img {
     overflow: hidden;
     transition: transform 250ms;
 
-    span {
+    i.private {
       position: absolute;
       top: 5px;
       right: 5px;
@@ -278,9 +279,16 @@ img {
       align-items: center;
     }
 
-    span:hover {
+    i.private:hover {
       background: #fff;
       color: var(--primary-color);
+    }
+
+    i.featured {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      color: var(--yellow-color);
     }
 
     .image {
@@ -327,8 +335,8 @@ img {
       }
 
       .links .link--yellow {
-        border: 1px solid #f8d210;
-        color: #f8d210;
+        border: 1px solid var(--yellow-color);
+        color: var(--yellow-color);
       }
 
       .links .link:hover {

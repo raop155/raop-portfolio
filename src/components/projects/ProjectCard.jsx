@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { faLock, faStar } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectCard = (props) => {
   const { project } = props;
@@ -35,12 +35,6 @@ const ProjectCard = (props) => {
         </p>
         <p>{small_description}</p>
         <div className='links flex'>
-          {isFeatured && (
-            <a className='link link--yellow' href='#!'>
-              Featured
-            </a>
-          )}
-
           {live && (
             <a className='link' href={urlLive} target='_blank' rel='noreferrer'>
               Live
@@ -58,10 +52,16 @@ const ProjectCard = (props) => {
           )}
         </div>
       </div>
+      {isFeatured && (
+        <i className='featured'>
+          <FontAwesomeIcon icon={faStar} size='1x' />
+        </i>
+      )}
+
       {isPrivate && (
-        <span>
+        <i className='private'>
           <FontAwesomeIcon icon={faLock} size='1x' />
-        </span>
+        </i>
       )}
     </div>
   );

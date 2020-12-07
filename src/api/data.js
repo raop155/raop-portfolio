@@ -27,7 +27,7 @@ const projects = [
       url: 'https://www.scotiabankchile.cl/',
       country: 'Chile',
     },
-    isFeatured: true,
+    isFeatured: false,
     isPrivate: true,
     video: {
       url: '#!',
@@ -44,7 +44,7 @@ const projects = [
       url: 'https://www.werking.com/',
       country: 'Paraguay',
     },
-    isFeatured: true,
+    isFeatured: false,
     isPrivate: true,
     video: {
       url: '#!',
@@ -61,7 +61,7 @@ const projects = [
       url: 'https://www.claro.com.pe/',
       country: 'Perú',
     },
-    isFeatured: true,
+    isFeatured: false,
     isPrivate: true,
     video: {
       url: '#!',
@@ -96,7 +96,7 @@ const projects = [
       url: 'https://www.werking.com/',
       country: 'Paraguay',
     },
-    isFeatured: true,
+    isFeatured: false,
     isPrivate: true,
     video: {
       url: '#!',
@@ -152,7 +152,7 @@ const projects = [
       url: '#about',
       country: 'Perú',
     },
-    isFeatured: false,
+    isFeatured: true,
     isPrivate: false,
     live: {
       url: 'https://vibrant-gates-241c61.netlify.app/',
@@ -234,7 +234,7 @@ const projects = [
       url: 'https://banco.santander.cl/',
       country: 'Chile',
     },
-    isFeatured: false,
+    isFeatured: true,
     isPrivate: false,
     live: {
       url: 'https://epic-montalcini-4ad150.netlify.app/',
@@ -255,7 +255,7 @@ const projects = [
       url: 'https://banco.santander.cl/',
       country: 'Chile',
     },
-    isFeatured: false,
+    isFeatured: true,
     isPrivate: false,
     live: {
       url: 'https://5fcaa386c3b2d8129cfa990b--compassionate-torvalds-2aff15.netlify.app/#/',
@@ -275,7 +275,7 @@ const projects = [
       url: '#about',
       country: 'Perú',
     },
-    isFeatured: false,
+    isFeatured: true,
     isPrivate: false,
     live: {
       url: 'https://bugdet-app.herokuapp.com/',
