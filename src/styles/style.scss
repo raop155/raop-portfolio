@@ -33,7 +33,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   font-family: inherit;
   padding: 0.5em 0.75em;
 }
@@ -230,6 +231,16 @@ img {
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
   filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+
+  #projects-filters {
+    margin-bottom: 2em;
+
+    .selects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+    }
+  }
 
   .projects-container {
     display: grid;

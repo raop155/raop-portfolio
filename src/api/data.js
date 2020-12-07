@@ -1,5 +1,6 @@
 const projects = [
   {
+    id: 1,
     title: 'Self-service Kiosk | Work Café',
     image: 'workcafe.JPG',
     small_description: "Work Café, Santander's innovative branch concept",
@@ -16,6 +17,7 @@ const projects = [
     },
   },
   {
+    id: 2,
     title: 'Self-service Kiosk',
     image: 'scotiabank.JPG',
     small_description: 'Modular System integration with various services integrations for clients',
@@ -32,6 +34,7 @@ const projects = [
     },
   },
   {
+    id: 3,
     title: 'Self-service Kiosk',
     image: 'werking.JPG',
     small_description: 'Modular System integration with various services integrations for clients',
@@ -48,6 +51,7 @@ const projects = [
     },
   },
   {
+    id: 4,
     title: 'Self-service Kiosk',
     image: 'claro.JPG',
     small_description: 'Modular System integration',
@@ -63,8 +67,8 @@ const projects = [
       url: '#!',
     },
   },
-
   {
+    id: 5,
     title: 'Queue & Statistics Dashboard',
     image: 'workcafe-dashboard.JPG',
     small_description: 'Queue & Stadistic System',
@@ -82,6 +86,7 @@ const projects = [
   },
 
   {
+    id: 6,
     title: 'Wheather & Video Player',
     image: 'werking-wheather.JPG',
     small_description: 'Video Player and Wheather API integration',
@@ -99,6 +104,7 @@ const projects = [
   },
 
   {
+    id: 7,
     title: 'Statistics Dashboard',
     image: 'werking-dashboard.JPG',
     small_description: "Web App with Werking's Self-service Kiosk stadistic records",
@@ -116,6 +122,7 @@ const projects = [
   },
 
   {
+    id: 8,
     title: 'Personal Portfolio',
     image: 'portfolio.JPG',
     small_description: "Ricardo Olarte's Personal Portfolio",
@@ -135,6 +142,7 @@ const projects = [
     },
   },
   {
+    id: 9,
     title: 'Loruki',
     image: 'loruki.JPG',
     small_description: "Saas's Landing Page",
@@ -154,6 +162,7 @@ const projects = [
     },
   },
   {
+    id: 10,
     title: 'La Casita Chaupin',
     image: 'lacasitachaupin.JPG',
     small_description: 'Web with downloadable menu for a small eco-restaurant from Chavin - Perú',
@@ -173,6 +182,7 @@ const projects = [
     },
   },
   {
+    id: 11,
     title: 'Star Wars API',
     image: 'starwars.JPG',
     small_description: 'Small Web App with Star Wars planets & people',
@@ -193,6 +203,7 @@ const projects = [
   },
 
   {
+    id: 12,
     title: 'Finantial Indicators | CENEFA',
     image: 'hub-cenefa.JPG',
     small_description: 'Web App with financial indicators for premium clients',
@@ -213,6 +224,7 @@ const projects = [
   },
 
   {
+    id: 13,
     title: 'Finantial Indicators | Dashboard',
     image: 'hub-dashboard.JPG',
     small_description: 'Web App with financial indicators for premium clients',
@@ -233,6 +245,7 @@ const projects = [
   },
 
   {
+    id: 14,
     title: 'Arturo Prat | Infographic',
     image: 'wall-prat.JPG',
     small_description: 'Arturo Prat small infographic for education purpose',
@@ -252,6 +265,7 @@ const projects = [
     },
   },
   {
+    id: 15,
     title: 'Expensify App',
     image: 'expensify.JPG',
     small_description: 'Expensify App where you can record your expenses',
@@ -271,6 +285,7 @@ const projects = [
     },
   },
   {
+    id: 16,
     title: 'Shopping List App',
     image: 'shoppinglist.JPG',
     small_description: 'Small Web App with shared shopping list',
