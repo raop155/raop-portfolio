@@ -154,7 +154,7 @@ img {
   .nav-item {
     color: var(--text-color);
     padding: 0.5em;
-    transition: box-shadow 550ms ease-out;
+    transition: box-shadow 550ms ease-out, color 550ms ease-out;
   }
 
   .nav-item:hover,
