@@ -10,11 +10,7 @@ const Projects = () => {
     <section id='projects'>
       <div className='container'>
         <h2>My Lastest Projects</h2>
-        <ProjectsFilter
-          projects={projects}
-          filteredProjects={filteredProjects}
-          setfilteredProjects={setfilteredProjects}
-        />
+        <ProjectsFilter projects={projects} setfilteredProjects={setfilteredProjects} />
         <div className='projects-container'>
           {filteredProjects.length &&
             filteredProjects.map((project) => <ProjectCard key={project.id} project={project} />)}

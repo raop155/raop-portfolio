@@ -1,6 +1,36 @@
 import React, { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHamburger, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
+  // Get hamburger/close buttons objects & Navbar object
+  useEffect(() => {
+    const navbar = document.querySelector('#navbar');
+    const hamburgerButton = document.querySelector('.hamburger-icon');
+    const closeButton = document.querySelector('.close-icon');
+
+    const openMenu = (open) => {
+      if (open) {
+        hamburgerButton.classList.remove('hamburger-icon--active');
+        closeButton.classList.add('close-icon--active');
+        navbar.classList.add('active');
+      } else {
+        closeButton.classList.remove('close-icon--active');
+        hamburgerButton.classList.add('hamburger-icon--active');
+        navbar.classList.remove('active');
+      }
+    };
+
+    hamburgerButton.addEventListener('click', (e) => openMenu(true));
+    closeButton.addEventListener('click', (e) => openMenu(false));
+
+    return () => {
+      hamburgerButton.removeEventListener('click', (e) => openMenu(true));
+      closeButton.removeEventListener('click', (e) => openMenu(false));
+    };
+  }, []);
+
+  // Initialize variables & add scroll event
   useEffect(() => {
     const navbarHeight = document.querySelector('#header').clientHeight;
     const navLinks = document.querySelectorAll('.nav-item');
@@ -24,8 +54,6 @@ const Header = () => {
       navLinks.forEach((navLink) => {
         navLink.classList.remove('active');
       });
-
-      // console.log(windowScroll, contactSectionOffset);
 
       if (windowScroll >= heroSectionOffset && windowScroll < projectsSectionOffset) {
         navLinks.forEach((navLink) => {
@@ -64,10 +92,10 @@ const Header = () => {
   return (
     <header id='header'>
       <div className='container flex'>
-        <a href='#hero'>
+        <a className='logo' href='#hero'>
           <p>R.</p>
         </a>
-        <nav className='flex'>
+        <nav id='navbar' className='flex'>
           <ul>
             <li>
               <a className='nav-item active' href='#hero'>
@@ -92,9 +120,12 @@ const Header = () => {
           </ul>
         </nav>
         <div className='toggler'>
-          <span></span>
-          <span></span>
-          <span></span>
+          <i className='hamburger-icon hamburger-icon--active'>
+            <FontAwesomeIcon icon={faHamburger} size='2x' />
+          </i>
+          <i className='close-icon'>
+            <FontAwesomeIcon icon={faTimes} size='2x' />
+          </i>
         </div>
       </div>
     </header>

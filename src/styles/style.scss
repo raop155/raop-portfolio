@@ -91,6 +91,10 @@ img {
     background: var(--primary-color);
     color: #fff;
   }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 // Utilities
@@ -130,8 +134,28 @@ img {
   }
 
   nav {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
     width: 100%;
-    justify-content: flex-end;
+    height: 100%;
+    display: flex;
+    transform: translateX(-100%);
+    transition: transform 500ms ease-in-out, opacity 500ms ease;
+    opacity: 0;
+  }
+
+  nav.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  nav ul {
+    display: grid;
+    gap: 1em;
+    font-size: 2rem;
+    text-align: center;
   }
 
   p {
@@ -141,16 +165,8 @@ img {
     font-weight: bold;
   }
 
-  nav li {
-    display: inline-block;
-  }
-
   a.active {
     color: var(--primary-color);
-  }
-
-  li + li {
-    margin-left: 1em;
   }
 
   .nav-item {
@@ -162,7 +178,79 @@ img {
   .nav-item:hover,
   .nav-item:focus {
     color: var(--primary-color);
-    box-shadow: inset 0 -50px 0 #fff;
+    box-shadow: inset 0 -75px 0 #fff;
+  }
+
+  .logo,
+  .toggler {
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  .toggler {
+    display: grid;
+    width: 50px;
+    height: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+
+    .hamburger-icon {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      text-align: center;
+      display: none;
+
+      &--active {
+        display: block;
+      }
+    }
+    .close-icon {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      text-align: center;
+      display: none;
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    nav {
+      display: flex;
+      position: relative;
+      background: none;
+      width: 100%;
+      height: 75px;
+      justify-content: flex-end;
+      transition: none;
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    nav ul {
+      display: inline-block;
+      font-size: 1.15rem;
+    }
+
+    nav li {
+      display: inline-block;
+    }
+
+    li + li {
+      margin-left: 1em;
+    }
+    .toggler {
+      display: none;
+    }
+
+    .nav-item:hover,
+    .nav-item:focus {
+      box-shadow: inset 0 -50px 0 #fff;
+    }
   }
 }
 
