@@ -66,12 +66,13 @@ ul {
 }
 
 main,
-section {
-  padding: 3em 1em;
-}
-
+section,
 footer {
-  padding: 3em 1em;
+  padding: 1.5em 0.5em;
+
+  @media (min-width: 768px) {
+    padding: 3em 1em;
+  }
 }
 
 img {
@@ -365,6 +366,7 @@ img {
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 9;
     }
 
     i.private:hover {
@@ -381,8 +383,68 @@ img {
 
     .image {
       width: 100%;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0.75);
+        width: 100%;
+        height: 50%;
+        transition: transform 350ms ease;
+        transform: scaleX(0);
+      }
+
+      &::before {
+        top: 0;
+        left: 0;
+        transform-origin: left;
+      }
+
+      &::after {
+        bottom: 0;
+        right: 0;
+        transform-origin: right;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        transform: scaleY(1);
+      }
+
+      .live-button {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+        opacity: 0;
+        transition: opacity 250ms ease-out;
+
+        font-size: 1rem;
+        // border: 1px solid var(--primary-color);
+        background: var(--primary-color);
+        color: #fff;
+        padding: 0.5em 2.5em;
+        outline: 1px solid var(--primary-color);
+        outline-offset: 2.5px;
+        transition: all 250ms ease;
+
+        &:hover {
+          color: var(--primary-color);
+          background: #fff;
+          outline: 1px solid #fff;
+        }
+      }
+
+      &:hover .live-button {
+        opacity: 1;
+      }
 
       img {
+        display: block;
         width: 100%;
         height: 250px;
         object-fit: cover;
@@ -435,11 +497,11 @@ img {
   }
 
   .project-card:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    // transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
 
-  @media (min-width: 321px) {
+  @media (min-width: 768px) {
     .projects-container {
       grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     }

@@ -25,6 +25,15 @@ const ProjectCard = (props) => {
     <div className='project-card'>
       <div className='image'>
         <img src={require(`../../assets/${image}`).default} alt={image} />
+        {live ? (
+          <a className='live-button' href={urlLive} target='_blank' rel='noreferrer'>
+            Live
+          </a>
+        ) : (
+          <a className='live-button' href={urlLive} target='_blank' rel='noreferrer'>
+            Gallery
+          </a>
+        )}
       </div>
       <div className='information'>
         <h3>{title}</h3>
@@ -35,11 +44,6 @@ const ProjectCard = (props) => {
         </p>
         <p>{small_description}</p>
         <div className='links flex'>
-          {live && (
-            <a className='link' href={urlLive} target='_blank' rel='noreferrer'>
-              Live
-            </a>
-          )}
           {code && (
             <a className='link' href={urlCode} target='_blank' rel='noreferrer'>
               Code
