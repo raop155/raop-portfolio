@@ -8,6 +8,7 @@ const Header = () => {
     const navbar = document.querySelector('#navbar');
     const hamburgerButton = document.querySelector('.hamburger-icon');
     const closeButton = document.querySelector('.close-icon');
+    const navLinks = document.querySelectorAll('.nav-item');
 
     const openMenu = (open) => {
       if (open) {
@@ -21,13 +22,12 @@ const Header = () => {
       }
     };
 
-    hamburgerButton.addEventListener('click', (e) => openMenu(true));
-    closeButton.addEventListener('click', (e) => openMenu(false));
+    hamburgerButton.addEventListener('click', () => openMenu(true));
+    closeButton.addEventListener('click', () => openMenu(false));
 
-    return () => {
-      hamburgerButton.removeEventListener('click', (e) => openMenu(true));
-      closeButton.removeEventListener('click', (e) => openMenu(false));
-    };
+    navLinks.forEach((navLink) => {
+      navLink.addEventListener('click', () => openMenu(false));
+    });
   }, []);
 
   // Initialize variables & add scroll event
