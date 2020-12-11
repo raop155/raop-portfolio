@@ -734,6 +734,15 @@ img {
     }
   }
 
+  .awards {
+    width: 100%;
+    margin: 0 auto;
+
+    p {
+      text-align: center;
+    }
+  }
+
   @media (min-width: 768px) {
     .information {
       flex-direction: row;
@@ -742,6 +751,10 @@ img {
     .image {
       min-width: 400px;
       margin-left: 2.5em;
+    }
+
+    .awards {
+      width: 75%;
     }
   }
 }

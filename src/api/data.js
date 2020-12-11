@@ -15,7 +15,11 @@ const projects = [
     videos: [
       {
         title: 'Video 1',
-        url: '#!',
+        url: 'https://vimeo.com/202974892',
+      },
+      {
+        title: 'Video 2',
+        url: 'https://vimeo.com/301629791',
       },
     ],
     gallery: [
@@ -104,6 +108,12 @@ const projects = [
     },
     isFeatured: false,
     isPrivate: true,
+    videos: [
+      {
+        title: 'Video 1',
+        url: 'https://vimeo.com/183005286',
+      },
+    ],
     gallery: [
       {
         image: 'claro-0.JPG',
@@ -135,7 +145,7 @@ const projects = [
     videos: [
       {
         title: 'Video 1',
-        url: '#!',
+        url: 'https://vimeo.com/301629791',
       },
     ],
     gallery: [
