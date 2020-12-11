@@ -649,6 +649,14 @@ img {
   .information {
     flex-direction: column;
     margin-bottom: 2em;
+
+    .description {
+      .button {
+        display: inline-block;
+        letter-spacing: 1px;
+        margin-bottom: 1em;
+      }
+    }
   }
 
   .image {
