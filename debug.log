@@ -3,10 +3,10 @@
 [1124/161348.562:ERROR:registration_protocol_win.cc(103)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
 [1124/182047.973:ERROR:registration_protocol_win.cc(103)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
 [1130/170623.826:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
-[1210/150510.049:ERROR:file_io.cc(134)] WriteFile: Se está cerrando la canalización. (0xE8)
+[1210/150510.049:ERROR:file_io.cc(134)] WriteFile: Se estï¿½ cerrando la canalizaciï¿½n. (0xE8)
 [1210/150512.166:ERROR:registration_protocol_win.cc(103)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
 [1210/150512.175:ERROR:registration_protocol_win.cc(103)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
 [1210/160845.987:ERROR:registration_protocol_win.cc(103)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
-[1211/122513.123:ERROR:file_io.cc(134)] WriteFile: Se está cerrando la canalización. (0xE8)
+[1211/122513.123:ERROR:file_io.cc(134)] WriteFile: Se estï¿½ cerrando la canalizaciï¿½n. (0xE8)
 [1211/122514.933:ERROR:registration_protocol_win.cc(103)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
 [1211/122514.942:ERROR:registration_protocol_win.cc(103)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
