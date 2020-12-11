@@ -17,20 +17,16 @@ const projects = [
     },
     gallery: [
       {
-        image: 'portfolio.JPG',
-        description: 'This is a Portfolio',
+        image: 'workcafe-0.JPG',
+        description: 'Home View',
       },
       {
-        image: 'scotiabank-1.JPG',
-        description: 'This is a Scotiabank',
+        image: 'workcafe-1.JPG',
+        description: 'Menu View',
       },
       {
-        image: 'werking.JPG',
-        description: 'This is a Scotiabank',
-      },
-      {
-        image: 'claro.JPG',
-        description: 'This is a Scotiabank',
+        image: 'workcafe-2.JPG',
+        description: 'Register/Login View',
       },
     ],
   },
@@ -50,6 +46,16 @@ const projects = [
     video: {
       url: '#!',
     },
+    gallery: [
+      {
+        image: 'scotiabank-2.JPG',
+        description: 'Menu View',
+      },
+      {
+        image: 'scotiabank-1.JPG',
+        description: 'Register/Login View',
+      },
+    ],
   },
   {
     id: 3,
@@ -67,6 +73,20 @@ const projects = [
     video: {
       url: '#!',
     },
+    gallery: [
+      {
+        image: 'werking-0.JPG',
+        description: 'Home View',
+      },
+      {
+        image: 'werking-1.JPG',
+        description: 'Register/Login View',
+      },
+      {
+        image: 'werking-2.JPG',
+        description: 'Menu View',
+      },
+    ],
   },
   {
     id: 4,
@@ -84,6 +104,20 @@ const projects = [
     video: {
       url: '#!',
     },
+    gallery: [
+      {
+        image: 'claro-0.JPG',
+        description: 'Home View',
+      },
+      {
+        image: 'claro-1.JPG',
+        description: 'Register/Login View - Spanish',
+      },
+      {
+        image: 'claro-2.JPG',
+        description: 'Register/Login View - English',
+      },
+    ],
   },
   {
     id: 5,
@@ -101,6 +135,21 @@ const projects = [
     video: {
       url: '#!',
     },
+    gallery: [
+      {
+        image: 'workcafe-dashboard-1.JPG',
+        description: 'Dashboard Part 1',
+      },
+      {
+        image: 'workcafe-dashboard.JPG',
+        description: 'Dashboard Part 2',
+      },
+
+      {
+        image: 'workcafe-dashboard-2.JPG',
+        description: 'Dashboard Full',
+      },
+    ],
   },
 
   {
@@ -119,6 +168,20 @@ const projects = [
     video: {
       url: '#!',
     },
+    gallery: [
+      {
+        image: 'werking-wheather-1.JPG',
+        description: 'Wheather Part 1',
+      },
+      {
+        image: 'werking-wheather-2.JPG',
+        description: 'Wheather Part 2',
+      },
+      {
+        image: 'werking-wheather-3.JPG',
+        description: 'Wheather Full',
+      },
+    ],
   },
 
   {
@@ -137,6 +200,16 @@ const projects = [
     video: {
       url: '#!',
     },
+    gallery: [
+      {
+        image: 'werking-dashboard.JPG',
+        description: 'Login View',
+      },
+      {
+        image: 'werking-dashboard-1.JPG',
+        description: 'Dashboard View',
+      },
+    ],
   },
 
   {
