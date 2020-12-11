@@ -17,13 +17,12 @@ const ProjectCard = (props) => {
     isPrivate,
     live,
     code,
-    video,
+    videos,
     gallery,
   } = project;
   const { name: companyName, country: companyCountry, url: companyURL } = company;
   const { url: urlLive } = live || {};
   const { url: urlCode } = code || {};
-  const { url: urlVideo } = video || {};
 
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
@@ -56,11 +55,12 @@ const ProjectCard = (props) => {
                 Code
               </a>
             )}
-            {video && (
-              <a className='link' href={urlVideo} target='_blank' rel='noreferrer'>
-                Video
-              </a>
-            )}
+            {videos?.length > 0 &&
+              videos.map((video, index) => (
+                <a className='link' key={index} href={video.url} target='_blank' rel='noreferrer'>
+                  {video.title}
+                </a>
+              ))}
           </div>
         </div>
         {isFeatured && (

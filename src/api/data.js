@@ -12,9 +12,12 @@ const projects = [
     },
     isFeatured: true,
     isPrivate: true,
-    video: {
-      url: '#!',
-    },
+    videos: [
+      {
+        title: 'Video 1',
+        url: '#!',
+      },
+    ],
     gallery: [
       {
         image: 'workcafe-0.JPG',
@@ -43,9 +46,6 @@ const projects = [
     },
     isFeatured: false,
     isPrivate: true,
-    video: {
-      url: '#!',
-    },
     gallery: [
       {
         image: 'scotiabank-2.JPG',
@@ -70,9 +70,12 @@ const projects = [
     },
     isFeatured: false,
     isPrivate: true,
-    video: {
-      url: '#!',
-    },
+    videos: [
+      {
+        title: 'Video 1',
+        url: '#!',
+      },
+    ],
     gallery: [
       {
         image: 'werking-0.JPG',
@@ -101,9 +104,6 @@ const projects = [
     },
     isFeatured: false,
     isPrivate: true,
-    video: {
-      url: '#!',
-    },
     gallery: [
       {
         image: 'claro-0.JPG',
@@ -132,9 +132,12 @@ const projects = [
     },
     isFeatured: true,
     isPrivate: true,
-    video: {
-      url: '#!',
-    },
+    videos: [
+      {
+        title: 'Video 1',
+        url: '#!',
+      },
+    ],
     gallery: [
       {
         image: 'workcafe-dashboard-1.JPG',
@@ -165,9 +168,12 @@ const projects = [
     },
     isFeatured: false,
     isPrivate: true,
-    video: {
-      url: '#!',
-    },
+    videos: [
+      {
+        title: 'Video 1',
+        url: '#!',
+      },
+    ],
     gallery: [
       {
         image: 'werking-wheather-1.JPG',
@@ -197,9 +203,6 @@ const projects = [
     },
     isFeatured: true,
     isPrivate: true,
-    video: {
-      url: '#!',
-    },
     gallery: [
       {
         image: 'werking-dashboard.JPG',

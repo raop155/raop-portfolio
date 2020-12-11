@@ -25,11 +25,11 @@ const About = () => {
               I am currently working as a Front-end Developer at{' '}
               <a href='https://www.px-group.com/' rel='noreferrer' target='_blank'>
                 Px-Group
-              </a>{' '}
+              </a>
               for 8+ years.
             </p>
             <p>
-              Well-organised person, responsible and a problem solver. Like videogames, married and
+              Well-organised person, responsible and a problem solver. Like video games, married and
               father of one boy.
             </p>
             <p>
