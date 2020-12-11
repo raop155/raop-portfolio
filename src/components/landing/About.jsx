@@ -25,7 +25,7 @@ const About = () => {
               I am currently working as a Front-end Developer at{' '}
               <a href='https://www.px-group.com/' rel='noreferrer' target='_blank'>
                 Px-Group
-              </a>
+              </a>{' '}
               for 8+ years.
             </p>
             <p>
@@ -36,11 +36,17 @@ const About = () => {
               Enthusiast in the entire Front-end spectrum, capable of working as a Full-stack
               Developer position on ambitious projects with positive people.
             </p>
+            <a
+              href={require('../../assets/Resume.pdf').default}
+              target='_blank'
+              className='button button--primary'
+            >
+              RESUME
+            </a>
           </div>
 
           <div className='image'>
             <img src={AboutMeImage} alt='Father with son' />
-            {/* <img src={require('../../assets/about_me.jpeg').default} alt='Father with son' /> */}
           </div>
         </div>
 
