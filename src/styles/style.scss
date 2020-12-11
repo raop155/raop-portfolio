@@ -58,6 +58,12 @@ h3 {
 a {
   text-decoration: none;
   color: var(--primary-color);
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  font-family: inherit;
 }
 
 ul {
@@ -320,7 +326,7 @@ img {
   background: var(--bg-color-light);
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
   #projects-filters {
     margin-bottom: 2em;
@@ -413,7 +419,8 @@ img {
         transform: scaleY(1);
       }
 
-      .live-button {
+      .live-button,
+      .gallery-button {
         cursor: pointer;
         position: absolute;
         top: 50%;
@@ -439,7 +446,8 @@ img {
         }
       }
 
-      &:hover .live-button {
+      &:hover .live-button,
+      &:hover .gallery-button {
         opacity: 1;
       }
 
@@ -494,6 +502,91 @@ img {
         border: 1px solid #fff;
       }
     }
+
+    .project-gallery {
+      position: fixed;
+      background: rgba(0, 0, 0, 0.75);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+
+      .container {
+        flex-direction: column;
+      }
+
+      .button-close {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: none;
+        width: 100%;
+        height: 100%;
+      }
+
+      .gallery-container {
+        position: relative;
+        background: rgba(0, 0, 0, 0.75);
+        padding: 1em;
+        border-radius: 10px;
+        width: 100%;
+
+        .title {
+          margin: 0;
+          padding: 0 0 0.5em 0;
+          font-size: 1rem;
+        }
+
+        .gallery {
+          position: relative;
+
+          .item {
+            position: relative;
+
+            img {
+              display: block;
+              object-fit: contain;
+              width: 100%;
+              max-height: 65vh;
+            }
+
+            .description {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              padding: 1em;
+              background: rgba(0, 0, 0, 0.5);
+              font-size: 0.65rem;
+            }
+          }
+        }
+
+        .button-arrow-left,
+        .button-arrow-right {
+          background: rgba(0, 0, 0, 0.5);
+          color: #fff;
+          position: absolute;
+          top: 50%;
+          padding: 1em;
+          transform: translateY(-50%);
+          font-size: 0.5rem;
+        }
+
+        .button-arrow-left {
+          left: 0;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+
+        .button-arrow-right {
+          right: 0;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+      }
+    }
   }
 
   .project-card:hover {
@@ -505,19 +598,34 @@ img {
     .projects-container {
       grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     }
+
+    .project-card {
+      .project-gallery {
+        .gallery-container {
+          position: relative;
+          background: rgba(0, 0, 0, 0.75);
+          padding: 1em;
+          border-radius: 10px;
+          width: 85%;
+
+          .title {
+            font-size: 1.5rem;
+          }
+
+          .button-arrow-left,
+          .button-arrow-right {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            padding: 1em;
+            transform: translateY(-50%);
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
   }
-
-  // @media (min-width: 1024px) {
-  //   .projects-container {
-  //     grid-template-columns: repeat(3, 1fr);
-  //   }
-  // }
-
-  // @media (min-width: 1024px) {
-  //   .projects-container {
-  //     grid-template-columns: repeat(3, 1fr);
-  //   }
-  // }
 }
 
 // About me
@@ -604,7 +712,7 @@ img {
     }
   }
 
-  @media (min-width: 760px) {
+  @media (min-width: 768px) {
     .information {
       flex-direction: row;
     }
@@ -660,4 +768,10 @@ img {
   ul li {
     padding: 0 1em;
   }
+}
+
+// Utilities
+
+.hide {
+  display: none !important;
 }
