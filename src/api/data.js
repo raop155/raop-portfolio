@@ -15,6 +15,24 @@ const projects = [
     video: {
       url: '#!',
     },
+    gallery: [
+      {
+        image: 'portfolio.JPG',
+        description: 'This is a Portfolio',
+      },
+      {
+        image: 'scotiabank-1.JPG',
+        description: 'This is a Scotiabank',
+      },
+      {
+        image: 'werking.JPG',
+        description: 'This is a Scotiabank',
+      },
+      {
+        image: 'claro.JPG',
+        description: 'This is a Scotiabank',
+      },
+    ],
   },
   {
     id: 2,

@@ -7,6 +7,7 @@ import ProjectGallery from './ProjectGallery';
 const ProjectCard = (props) => {
   const { project } = props;
   const {
+    id,
     title,
     image,
     small_description,
@@ -17,6 +18,7 @@ const ProjectCard = (props) => {
     live,
     code,
     video,
+    gallery,
   } = project;
   const { name: companyName, country: companyCountry, url: companyURL } = company;
   const { url: urlLive } = live || {};
@@ -72,7 +74,14 @@ const ProjectCard = (props) => {
             <FontAwesomeIcon icon={faLock} size='1x' />
           </i>
         )}
-        {isGalleryOpen && <ProjectGallery title={title} setIsGalleryOpen={setIsGalleryOpen} />}
+        {isGalleryOpen && (
+          <ProjectGallery
+            id={id}
+            title={title}
+            setIsGalleryOpen={setIsGalleryOpen}
+            gallery={gallery}
+          />
+        )}
       </div>
     </>
   );
