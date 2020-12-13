@@ -77,7 +77,7 @@ const projects = [
     videos: [
       {
         title: 'Video 1',
-        url: '#!',
+        url: 'https://www.youtube.com/watch?v=GMZ1iVzFvSc&feature=youtu.be&t=20',
       },
     ],
     gallery: [
@@ -181,7 +181,7 @@ const projects = [
     videos: [
       {
         title: 'Video 1',
-        url: '#!',
+        url: 'https://youtu.be/fbJ7ctuHg4A?t=21',
       },
     ],
     gallery: [
