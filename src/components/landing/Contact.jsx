@@ -13,7 +13,7 @@ const Contact = () => {
           xmlns='http://www.w3.org/2000/svg'
           className='svgcolor-light'
         >
-          <path d='M0 0 L50 100 L100 0 Z' fill='#222' stroke='#222'></path>
+          <path className='path-light' d='M0 0 L50 100 L100 0 Z' fill='#222' stroke='#222'></path>
         </svg>
       </div>
 

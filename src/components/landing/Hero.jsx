@@ -1,4 +1,5 @@
 import React from 'react';
+import DarkModeToggler from '../hero/DarkModeToggler';
 
 const Hero = () => {
   return (
@@ -15,6 +16,8 @@ const Hero = () => {
         <a href='#projects' className='button button--primary'>
           PROJECTS
         </a>
+
+        <DarkModeToggler />
       </div>
     </main>
   );
