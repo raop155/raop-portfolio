@@ -20,7 +20,14 @@ const Contact = () => {
       <div className='container'>
         <h2>Contact me</h2>
 
-        <form id='form' action='#!'>
+        <form id='form' name='contact' method='POST' data-netlify='true'>
+          <input type='hidden' name='form-name' value='contact' />
+          <p class='hide'>
+            <label>
+              Don’t fill this out if you're human: <input name='bot-field' />
+            </label>
+          </p>
+
           <div className='form-group'>
             <div>
               <label htmlFor='name'>Name:</label>
