@@ -20,7 +20,7 @@ const filters = [
   },
 ];
 
-const ProjectsFilter = ({ projects, setfilteredProjects }) => {
+const ProjectsFilter = ({ projects, filteredProjects, setfilteredProjects }) => {
   const [selectFilter, setSelectFilter] = useState('Featured');
   const [subfilters, setSubfilters] = useState(null);
   const [selectSubfilter, setSelectSubfilter] = useState(null);
@@ -80,7 +80,13 @@ const ProjectsFilter = ({ projects, setfilteredProjects }) => {
 
   return (
     <div id='projects-filters'>
-      <h3>Filters</h3>
+      <h3>
+        Filters:{' '}
+        <span>
+          {filteredProjects.length} of {projects.length}
+        </span>
+      </h3>
+
       <div className='selects'>
         <select name='filter' value={selectFilter} onChange={(e) => handleFilterChange(e)}>
           {filters.map((filter) => {

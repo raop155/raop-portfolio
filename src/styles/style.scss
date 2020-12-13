@@ -350,6 +350,15 @@ img {
   #projects-filters {
     margin-bottom: 2em;
 
+    h3 {
+      margin-top: 0.5em;
+
+      span {
+        font-size: 1rem;
+        color: var(--gray-color);
+      }
+    }
+
     .selects {
       display: grid;
       grid-template-columns: 1fr 1fr;
