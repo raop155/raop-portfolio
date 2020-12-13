@@ -9,14 +9,15 @@ const DarkModeToggler = () => {
 
   useEffect(() => {
     const body = document.querySelector('body');
-    body.classList.toggle('dark');
+    if (isDark) body.classList.remove('light');
+    else body.classList.add('light');
   }, [isDark]);
 
   return (
     <div id='darkmode-toggler'>
       <span
         className={isDark ? 'darkmode-switch darkmode-switch--active' : 'darkmode-switch'}
-        onClick={changeThemeMode}
+        onClick={() => changeThemeMode()}
       ></span>
     </div>
   );
