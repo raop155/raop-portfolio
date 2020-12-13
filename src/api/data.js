@@ -131,9 +131,9 @@ const projects = [
   },
   {
     id: 5,
-    title: 'Queue & Statistics Dashboard',
+    title: 'Queue & Statistic Dashboard',
     image: 'workcafe-dashboard.JPG',
-    small_description: 'Queue & Stadistic System',
+    small_description: 'Queue & Statistic System',
     description: 'Description',
     company: {
       name: 'Santander',
@@ -308,7 +308,7 @@ const projects = [
 
   {
     id: 12,
-    title: 'Finantial Indicators | CENEFA',
+    title: 'Financial Indicators | CENEFA',
     image: 'hub-cenefa.JPG',
     small_description: 'Web App with financial indicators for premium clients',
     description: '',
@@ -329,7 +329,7 @@ const projects = [
 
   {
     id: 13,
-    title: 'Finantial Indicators | Dashboard',
+    title: 'Financial Indicators | Dashboard',
     image: 'hub-dashboard.JPG',
     small_description: 'Web App with financial indicators for premium clients',
     description: '',
@@ -350,9 +350,9 @@ const projects = [
 
   {
     id: 14,
-    title: 'Arturo Prat | Infographic',
+    title: 'Arturo Prat Infographic',
     image: 'wall-prat.JPG',
-    small_description: 'Arturo Prat small infographic for education purpose',
+    small_description: 'Small educational infographic',
     description: '',
     company: {
       name: 'Santander',
