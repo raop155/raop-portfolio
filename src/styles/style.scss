@@ -438,6 +438,14 @@ img {
         transform: scaleY(1);
       }
 
+      .hand {
+        position: absolute;
+        bottom: 0.5em;
+        right: 1em;
+        transform: rotate(-25deg);
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+      }
+
       .live-button,
       .gallery-button {
         cursor: pointer;
@@ -641,6 +649,12 @@ img {
             transform: translateY(-50%);
             font-size: 0.75rem;
           }
+        }
+      }
+
+      .image {
+        .hand {
+          display: none;
         }
       }
     }

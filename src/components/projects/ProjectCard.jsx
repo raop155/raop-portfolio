@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faLock, faStar, faHandPointUp } from '@fortawesome/free-solid-svg-icons';
 import ProjectGallery from './ProjectGallery';
 
 const ProjectCard = (props) => {
@@ -40,6 +40,12 @@ const ProjectCard = (props) => {
               Gallery
             </button>
           )}
+
+          <div className='hand'>
+            <i>
+              <FontAwesomeIcon icon={faHandPointUp} size='2x' />
+            </i>
+          </div>
         </div>
         <div className='information'>
           <h3>{title}</h3>
