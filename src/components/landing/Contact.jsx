@@ -27,7 +27,14 @@ const Contact = () => {
             <div>
               <label htmlFor='name'>Name:</label>
             </div>
-            <input type='text' name='name' id='name' placeholder='Enter your name here' />
+            <input
+              type='text'
+              name='name'
+              id='name'
+              minlength='2'
+              placeholder='Enter your name here'
+              required
+            />
           </div>
 
           <div className='form-group'>
@@ -35,7 +42,14 @@ const Contact = () => {
               <label htmlFor='email'>Email:</label>
             </div>
 
-            <input type='email' name='email' id='email' placeholder='Enter your email here' />
+            <input
+              type='email'
+              name='email'
+              id='email'
+              minlength='2'
+              placeholder='Enter your email here'
+              required
+            />
           </div>
 
           <div className='form-group'>
