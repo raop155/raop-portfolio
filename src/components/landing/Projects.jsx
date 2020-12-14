@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <section id='projects'>
       <div className='container'>
-        <h2>My Lastest Projects</h2>
+        <h2>My Latest Projects</h2>
         <ProjectsFilter
           projects={projects}
           filteredProjects={filteredProjects}

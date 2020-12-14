@@ -31,7 +31,7 @@ const Contact = () => {
               type='text'
               name='name'
               id='name'
-              minlength='2'
+              minLength='2'
               placeholder='Enter your name here'
               required
             />
@@ -46,7 +46,7 @@ const Contact = () => {
               type='email'
               name='email'
               id='email'
-              minlength='2'
+              minLength='2'
               placeholder='Enter your email here'
               required
             />
