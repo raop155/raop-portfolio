@@ -1,8 +1,8 @@
 import React from 'react';
 import App from '../App';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 
-// afterEach(cleanup);
+afterEach(cleanup);
 
 describe('App Component', () => {
   test('Should take a snapshot', () => {
