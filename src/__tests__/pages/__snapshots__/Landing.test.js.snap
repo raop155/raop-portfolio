@@ -29,8 +29,9 @@ exports[`Landing Component Should take a snapshot 1`] = `
         <div
           id="darkmode-toggler"
         >
-          <span
+          <button
             class="darkmode-switch darkmode-switch--active"
+            data-testid="darkmode-toggler"
           />
         </div>
       </div>
