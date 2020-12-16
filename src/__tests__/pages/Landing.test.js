@@ -1,8 +1,6 @@
 import React from 'react';
 import Landing from '../../pages/Landing';
-import { render, cleanup } from '@testing-library/react';
-
-afterEach(cleanup);
+import { render } from '@testing-library/react';
 
 describe('Landing Component', () => {
   test('Should take a snapshot', () => {

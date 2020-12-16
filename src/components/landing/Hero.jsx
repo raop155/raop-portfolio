@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-dom';
 import DarkModeToggler from '../hero/DarkModeToggler';
 
 const Hero = () => {
