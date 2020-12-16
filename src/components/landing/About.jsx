@@ -11,6 +11,7 @@ import {
   faVuejs,
   faSass,
 } from '@fortawesome/free-brands-svg-icons';
+import PDF from '../../assets/Resume.pdf';
 
 import { faFileCode, faCode, faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
 
@@ -37,7 +38,8 @@ const About = () => {
               Developer position on ambitious projects with positive people.
             </p>
             <a
-              href={require('../../assets/Resume.pdf').default}
+              // href={require('../../assets/Resume.pdf').default}
+              href={PDF}
               target='_blank'
               rel='noreferrer'
               className='button button--primary'

@@ -1004,6 +1004,7 @@ exports[`App Component Should take a snapshot 1`] = `
               </p>
               <a
                 class="button button--primary"
+                href="Resume.pdf"
                 rel="noreferrer"
                 target="_blank"
               >

@@ -17,9 +17,8 @@ describe('Landing Component', () => {
       expect(button).toBeInTheDocument();
     });
 
-    test('Should have #projects anchor', async () => {
-      const anchorId = button.getAttribute('href');
-      expect(anchorId).toEqual('#projects');
+    test('Should have #projects anchor id', async () => {
+      expect(button).toHaveAttribute('href', '#projects');
     });
   });
 
@@ -30,8 +29,7 @@ describe('Landing Component', () => {
 
     test('Should change to light mode', () => {
       fireEvent.click(darkModeButton);
-      const className = darkModeButton.classList.contains('darkmode-switch--active');
-      expect(className).toBeFalsy();
+      expect(darkModeButton).not.toHaveClass('darkmode-switch--active');
     });
   });
 });
