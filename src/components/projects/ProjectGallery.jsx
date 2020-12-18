@@ -17,7 +17,7 @@ const ProjectGallery = (props) => {
   };
 
   return (
-    <div className='project-gallery'>
+    <div className='project-gallery' data-testid='gallery'>
       <div className='container flex'>
         <div className='button-close' onClick={() => setIsGalleryOpen(false)}></div>
         <div className='gallery-container'>

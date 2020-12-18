@@ -295,6 +295,12 @@ img {
   height: calc(100vh - 75px);
   min-height: calc(100vh - 75px);
 
+  .hero-observer {
+    position: absolute;
+    top: -100px;
+    height: 10px;
+  }
+
   .container {
     position: relative;
     flex-direction: column;

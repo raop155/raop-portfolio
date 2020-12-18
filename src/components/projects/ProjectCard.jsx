@@ -28,7 +28,7 @@ const ProjectCard = (props) => {
 
   return (
     <>
-      <div className='project-card'>
+      <div className='project-card' data-testid='project-card'>
         <div className='image'>
           <img src={require(`../../assets/${image}`).default} alt={image} />
           {live ? (

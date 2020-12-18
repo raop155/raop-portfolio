@@ -82,13 +82,18 @@ const ProjectsFilter = ({ projects, filteredProjects, setfilteredProjects }) => 
     <div id='projects-filters'>
       <h3>
         Filters:{' '}
-        <span>
+        <span data-testid='filter-count'>
           {filteredProjects.length} of {projects.length}
         </span>
       </h3>
 
       <div className='selects'>
-        <select name='filter' value={selectFilter} onChange={(e) => handleFilterChange(e)}>
+        <select
+          name='filter'
+          value={selectFilter}
+          onChange={(e) => handleFilterChange(e)}
+          data-testid='filter'
+        >
           {filters.map((filter) => {
             return (
               <option key={filter.name} value={filter.name}>
@@ -98,7 +103,12 @@ const ProjectsFilter = ({ projects, filteredProjects, setfilteredProjects }) => 
           })}
         </select>
         {subfilters && (
-          <select name='select' value={selectSubfilter} onChange={(e) => handleSubFilterChange(e)}>
+          <select
+            name='select'
+            value={selectSubfilter}
+            onChange={(e) => handleSubFilterChange(e)}
+            data-testid='subfilter'
+          >
             {subfilters.map((subfilter) => {
               return (
                 <option key={subfilter.name} value={subfilter.name}>

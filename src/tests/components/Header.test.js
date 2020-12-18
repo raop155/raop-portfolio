@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 let homeLink;
 let projectsLink;
@@ -29,6 +29,39 @@ describe('Header Component', () => {
       expect(projectsLink).toHaveAttribute('href', '#projects');
       expect(aboutLink).toHaveAttribute('href', '#about');
       expect(contactLink).toHaveAttribute('href', '#contact');
+    });
+  });
+
+  test('Should open navbar', () => {
+    const navbar = screen.getByTestId('navbar');
+    const hamburgerButton = screen.getByTestId('hamburger-button');
+
+    fireEvent.click(hamburgerButton);
+
+    expect(hamburgerButton).not.toHaveClass('hamburger-icon--active');
+    expect(navbar).toHaveClass('active');
+  });
+
+  test('Should close navbar', () => {
+    const navbar = screen.getByTestId('navbar');
+    const closebutton = screen.getByTestId('close-button');
+
+    fireEvent.click(closebutton);
+
+    expect(closebutton).not.toHaveClass('close-icon--active');
+    expect(navbar).not.toHaveClass('active');
+  });
+
+  test('test', async () => {
+    fireEvent.click(projectsLink);
+
+    // await waitFor(() => screen.debug(projectsLink));
+
+    await waitFor(() => {
+      const navbar = screen.getByTestId('navbar');
+      const navLinks = navbar.querySelectorAll('.nav-item');
+      screen.debug(navbar);
+      expect(navLinks[0]).toHaveClass('active');
     });
   });
 });

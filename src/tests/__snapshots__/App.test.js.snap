@@ -2,7 +2,9 @@
 
 exports[`App Component Should take a snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    id="app"
+  >
     <header
       id="header"
     >
@@ -19,6 +21,7 @@ exports[`App Component Should take a snapshot 1`] = `
         </a>
         <nav
           class="flex"
+          data-testid="navbar"
           id="navbar"
         >
           <ul>
@@ -61,6 +64,7 @@ exports[`App Component Should take a snapshot 1`] = `
         >
           <i
             class="hamburger-icon hamburger-icon--active"
+            data-testid="hamburger-button"
           >
             <svg
               aria-hidden="true"
@@ -80,6 +84,7 @@ exports[`App Component Should take a snapshot 1`] = `
           </i>
           <i
             class="close-icon"
+            data-testid="close-button"
           >
             <svg
               aria-hidden="true"
@@ -148,7 +153,9 @@ exports[`App Component Should take a snapshot 1`] = `
           >
             <h3>
               Filters: 
-              <span>
+              <span
+                data-testid="filter-count"
+              >
                 8 of 16
               </span>
             </h3>
@@ -156,6 +163,7 @@ exports[`App Component Should take a snapshot 1`] = `
               class="selects"
             >
               <select
+                data-testid="filter"
                 name="filter"
               >
                 <option
@@ -186,6 +194,7 @@ exports[`App Component Should take a snapshot 1`] = `
           >
             <div
               class="project-card"
+              data-testid="project-card"
             >
               <div
                 class="image"
@@ -302,6 +311,7 @@ exports[`App Component Should take a snapshot 1`] = `
             </div>
             <div
               class="project-card"
+              data-testid="project-card"
             >
               <div
                 class="image"
@@ -410,6 +420,7 @@ exports[`App Component Should take a snapshot 1`] = `
             </div>
             <div
               class="project-card"
+              data-testid="project-card"
             >
               <div
                 class="image"
@@ -509,6 +520,7 @@ exports[`App Component Should take a snapshot 1`] = `
             </div>
             <div
               class="project-card"
+              data-testid="project-card"
             >
               <div
                 class="image"
@@ -601,6 +613,7 @@ exports[`App Component Should take a snapshot 1`] = `
             </div>
             <div
               class="project-card"
+              data-testid="project-card"
             >
               <div
                 class="image"
@@ -693,6 +706,7 @@ exports[`App Component Should take a snapshot 1`] = `
             </div>
             <div
               class="project-card"
+              data-testid="project-card"
             >
               <div
                 class="image"
@@ -785,6 +799,7 @@ exports[`App Component Should take a snapshot 1`] = `
             </div>
             <div
               class="project-card"
+              data-testid="project-card"
             >
               <div
                 class="image"
@@ -877,6 +892,7 @@ exports[`App Component Should take a snapshot 1`] = `
             </div>
             <div
               class="project-card"
+              data-testid="project-card"
             >
               <div
                 class="image"

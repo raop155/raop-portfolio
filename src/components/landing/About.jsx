@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import AboutMeImage from '../../assets/about_me.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -14,12 +14,28 @@ import {
 import PDF from '../../assets/Resume.pdf';
 
 import { faFileCode, faCode, faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
-const About = () => {
+const About = ({ setCurrentSection }) => {
+  const refComponent = useRef(null);
+
+  const changeHeader = () => {
+    console.log('About Section');
+    setCurrentSection('about');
+  };
+
+  useIntersectionObserver({
+    target: refComponent,
+    onIntersect: changeHeader,
+    rootMargin: '0px',
+    threshold: 1.0,
+    enabled: true,
+  });
+
   return (
     <section id='about'>
       <div className='container flex'>
-        <h2>About Me</h2>
+        <h2 ref={refComponent}>About Me</h2>
         <div className='information flex'>
           <div className='description'>
             <p>

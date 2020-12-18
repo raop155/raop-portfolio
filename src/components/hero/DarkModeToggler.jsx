@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const DarkModeToggler = () => {
+const DarkModeToggler = (_, ref) => {
   const [isDark, setIsDark] = useState(true);
 
   const changeThemeMode = (e) => {
@@ -14,7 +14,7 @@ const DarkModeToggler = () => {
   }, [isDark]);
 
   return (
-    <div id='darkmode-toggler'>
+    <div id='darkmode-toggler' ref={ref}>
       <button
         data-testid='darkmode-toggler'
         className={isDark ? 'darkmode-switch darkmode-switch--active' : 'darkmode-switch'}
@@ -24,4 +24,4 @@ const DarkModeToggler = () => {
   );
 };
 
-export default DarkModeToggler;
+export default React.forwardRef(DarkModeToggler);
