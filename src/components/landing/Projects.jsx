@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import ProjectCard from '../projects/ProjectCard';
 import projects from '../../api/data';
 import ProjectsFilter from '../projects/ProjectsFilter';
-import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 const Projects = (_, ref) => {
   const [filteredProjects, setfilteredProjects] = useState(projects);
