@@ -3,13 +3,13 @@ import ProjectCard from '../projects/ProjectCard';
 import projects from '../../api/data';
 import ProjectsFilter from '../projects/ProjectsFilter';
 
-const Projects = () => {
+const Projects = (_, ref) => {
   const [filteredProjects, setfilteredProjects] = useState(projects);
 
   return (
     <section id='projects'>
       <div className='container'>
-        <h2>My Latest Projects</h2>
+        <h2 ref={ref}>My Latest Projects</h2>
         <ProjectsFilter
           projects={projects}
           filteredProjects={filteredProjects}
@@ -24,4 +24,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default React.forwardRef(Projects);

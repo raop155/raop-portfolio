@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
-const Contact = () => {
+const Contact = (_, ref) => {
+  const refComponent = useRef(null);
+
   return (
     <section id='contact'>
       <div className='arrow-down'>
@@ -18,7 +20,7 @@ const Contact = () => {
       </div>
 
       <div className='container'>
-        <h2>Contact me</h2>
+        <h2 ref={ref}>Contact me</h2>
 
         <form id='form' name='contact' method='POST'>
           <input type='hidden' name='form-name' value='contact' />
@@ -67,4 +69,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default React.forwardRef(Contact);

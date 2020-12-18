@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import DarkModeToggler from '../hero/DarkModeToggler';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
-const Hero = () => {
+const Hero = (_, ref) => {
   return (
     <main id='hero'>
       <div className='container flex'>
@@ -18,9 +19,10 @@ const Hero = () => {
         </a>
 
         <DarkModeToggler />
+        <div className='hero-observer' ref={ref}></div>
       </div>
     </main>
   );
 };
 
-export default Hero;
+export default React.forwardRef(Hero);

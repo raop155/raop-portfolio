@@ -15,12 +15,13 @@ const DarkModeToggler = () => {
 
   return (
     <div id='darkmode-toggler'>
-      <span
+      <button
+        data-testid='darkmode-toggler'
         className={isDark ? 'darkmode-switch darkmode-switch--active' : 'darkmode-switch'}
         onClick={() => changeThemeMode()}
-      ></span>
+      ></button>
     </div>
   );
 };
 
-export default DarkModeToggler;
+export default React.forwardRef(DarkModeToggler);

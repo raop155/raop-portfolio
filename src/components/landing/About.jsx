@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import AboutMeImage from '../../assets/about_me.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,14 +11,16 @@ import {
   faVuejs,
   faSass,
 } from '@fortawesome/free-brands-svg-icons';
+import PDF from '../../assets/Resume.pdf';
 
 import { faFileCode, faCode, faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
-const About = () => {
+const About = (_, ref) => {
   return (
     <section id='about'>
       <div className='container flex'>
-        <h2>About Me</h2>
+        <h2 ref={ref}>About Me</h2>
         <div className='information flex'>
           <div className='description'>
             <p>
@@ -37,7 +39,8 @@ const About = () => {
               Developer position on ambitious projects with positive people.
             </p>
             <a
-              href={require('../../assets/Resume.pdf').default}
+              // href={require('../../assets/Resume.pdf').default}
+              href={PDF}
               target='_blank'
               rel='noreferrer'
               className='button button--primary'
@@ -159,4 +162,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default React.forwardRef(About);
