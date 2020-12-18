@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import DarkModeToggler from '../hero/DarkModeToggler';
-import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 const Hero = (_, ref) => {
   return (
