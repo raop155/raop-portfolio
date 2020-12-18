@@ -1,8 +1,6 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 const Contact = (_, ref) => {
-  const refComponent = useRef(null);
-
   return (
     <section id='contact'>
       <div className='arrow-down'>

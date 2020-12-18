@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import AboutMeImage from '../../assets/about_me.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -14,7 +14,6 @@ import {
 import PDF from '../../assets/Resume.pdf';
 
 import { faFileCode, faCode, faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
-import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 const About = (_, ref) => {
   return (
