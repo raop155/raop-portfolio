@@ -11,22 +11,19 @@ beforeEach(() => {
   darkModeButton = screen.getByTestId('darkmode-toggler');
 });
 
-describe('Landing Component', () => {
+describe('Hero Component', () => {
   describe('Projects Link Button', () => {
     test('Should be in the document', async () => {
       expect(button).toBeInTheDocument();
     });
-
     test('Should have #projects anchor id', async () => {
       expect(button).toHaveAttribute('href', '#projects');
     });
   });
-
   describe('Dark mode toggler', () => {
     test('Should be in the document', () => {
       expect(darkModeButton).toBeInTheDocument();
     });
-
     test('Should change to light mode', () => {
       fireEvent.click(darkModeButton);
       expect(darkModeButton).not.toHaveClass('darkmode-switch--active');

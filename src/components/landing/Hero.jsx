@@ -2,22 +2,7 @@ import React, { useRef } from 'react';
 import DarkModeToggler from '../hero/DarkModeToggler';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
-const Hero = ({ setCurrentSection }) => {
-  const refComponent = useRef(null);
-
-  const changeHeader = () => {
-    console.log('Hero Section');
-    setCurrentSection('hero');
-  };
-
-  useIntersectionObserver({
-    target: refComponent,
-    onIntersect: changeHeader,
-    rootMargin: '0px',
-    threshold: 1.0,
-    enabled: true,
-  });
-
+const Hero = (_, ref) => {
   return (
     <main id='hero'>
       <div className='container flex'>
@@ -34,10 +19,10 @@ const Hero = ({ setCurrentSection }) => {
         </a>
 
         <DarkModeToggler />
-        <div className='hero-observer' ref={refComponent}></div>
+        <div className='hero-observer' ref={ref}></div>
       </div>
     </main>
   );
 };
 
-export default Hero;
+export default React.forwardRef(Hero);

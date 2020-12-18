@@ -6,9 +6,11 @@ let homeLink;
 let projectsLink;
 let aboutLink;
 let contactLink;
+let outSideRerender;
 
 beforeEach(() => {
-  render(<Header />);
+  const { rerender } = render(<Header />);
+  outSideRerender = rerender;
   homeLink = screen.getByRole('link', { name: /home/i });
   projectsLink = screen.getByRole('link', { name: /projects/i });
   aboutLink = screen.getByRole('link', { name: /about/i });
@@ -52,16 +54,31 @@ describe('Header Component', () => {
     expect(navbar).not.toHaveClass('active');
   });
 
-  test('test', async () => {
-    fireEvent.click(projectsLink);
+  test('Should change navlink style from prop', async () => {
+    outSideRerender(<Header currentSection='hero' />);
+    let navbar;
+    let navLinks;
 
-    // await waitFor(() => screen.debug(projectsLink));
+    navbar = screen.getByTestId('navbar');
+    navLinks = navbar.querySelectorAll('.nav-item');
+    expect(navLinks[0]).toHaveClass('active');
 
-    await waitFor(() => {
-      const navbar = screen.getByTestId('navbar');
-      const navLinks = navbar.querySelectorAll('.nav-item');
-      screen.debug(navbar);
-      expect(navLinks[0]).toHaveClass('active');
-    });
+    outSideRerender(<Header currentSection='projects' />);
+
+    navbar = screen.getByTestId('navbar');
+    navLinks = navbar.querySelectorAll('.nav-item');
+    expect(navLinks[1]).toHaveClass('active');
+
+    outSideRerender(<Header currentSection='about' />);
+
+    navbar = screen.getByTestId('navbar');
+    navLinks = navbar.querySelectorAll('.nav-item');
+    expect(navLinks[2]).toHaveClass('active');
+
+    outSideRerender(<Header currentSection='contact' />);
+
+    navbar = screen.getByTestId('navbar');
+    navLinks = navbar.querySelectorAll('.nav-item');
+    expect(navLinks[3]).toHaveClass('active');
   });
 });

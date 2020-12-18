@@ -16,26 +16,11 @@ import PDF from '../../assets/Resume.pdf';
 import { faFileCode, faCode, faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
-const About = ({ setCurrentSection }) => {
-  const refComponent = useRef(null);
-
-  const changeHeader = () => {
-    console.log('About Section');
-    setCurrentSection('about');
-  };
-
-  useIntersectionObserver({
-    target: refComponent,
-    onIntersect: changeHeader,
-    rootMargin: '0px',
-    threshold: 1.0,
-    enabled: true,
-  });
-
+const About = (_, ref) => {
   return (
     <section id='about'>
       <div className='container flex'>
-        <h2 ref={refComponent}>About Me</h2>
+        <h2 ref={ref}>About Me</h2>
         <div className='information flex'>
           <div className='description'>
             <p>
@@ -177,4 +162,4 @@ const About = ({ setCurrentSection }) => {
   );
 };
 
-export default About;
+export default React.forwardRef(About);

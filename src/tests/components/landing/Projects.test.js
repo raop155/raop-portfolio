@@ -1,6 +1,6 @@
 import React from 'react';
 import Projects from '../../../components/landing/Projects';
-import { render, screen, fireEvent, getAllByTestId, getByTestId } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import projects from '../../../api/data';
 
 beforeEach(() => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const DarkModeToggler = (_, ref) => {
+const DarkModeToggler = () => {
   const [isDark, setIsDark] = useState(true);
 
   const changeThemeMode = (e) => {
@@ -14,7 +14,7 @@ const DarkModeToggler = (_, ref) => {
   }, [isDark]);
 
   return (
-    <div id='darkmode-toggler' ref={ref}>
+    <div id='darkmode-toggler'>
       <button
         data-testid='darkmode-toggler'
         className={isDark ? 'darkmode-switch darkmode-switch--active' : 'darkmode-switch'}

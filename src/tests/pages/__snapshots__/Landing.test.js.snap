@@ -34,6 +34,9 @@ exports[`Landing Component Should take a snapshot 1`] = `
             data-testid="darkmode-toggler"
           />
         </div>
+        <div
+          class="hero-observer"
+        />
       </div>
     </main>
     <section

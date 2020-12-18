@@ -1,21 +1,7 @@
 import React, { useRef } from 'react';
-import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
-const Contact = ({ setCurrentSection }) => {
+const Contact = (_, ref) => {
   const refComponent = useRef(null);
-
-  const changeHeader = () => {
-    console.log('Contact Section');
-    setCurrentSection('contact');
-  };
-
-  useIntersectionObserver({
-    target: refComponent,
-    onIntersect: changeHeader,
-    rootMargin: '0px',
-    threshold: 1.0,
-    enabled: true,
-  });
 
   return (
     <section id='contact'>
@@ -34,7 +20,7 @@ const Contact = ({ setCurrentSection }) => {
       </div>
 
       <div className='container'>
-        <h2 ref={refComponent}>Contact me</h2>
+        <h2 ref={ref}>Contact me</h2>
 
         <form id='form' name='contact' method='POST'>
           <input type='hidden' name='form-name' value='contact' />
@@ -83,4 +69,4 @@ const Contact = ({ setCurrentSection }) => {
   );
 };
 
-export default Contact;
+export default React.forwardRef(Contact);
