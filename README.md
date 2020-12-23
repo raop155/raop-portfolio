@@ -57,4 +57,5 @@ Enjoy :)
 
 * [React.js](https://reactjs.org/)
 * [React Testing Library](https://testing-library.com/)
+* [React Font-Awesome](https://github.com/FortAwesome/react-fontawesome)
 
