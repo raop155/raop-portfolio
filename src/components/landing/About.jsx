@@ -31,8 +31,8 @@ const About = React.forwardRef((_, ref) => {
               for 8+ years.
             </p>
             <p>
-              Well-organised person, responsible and a problem solver. Like video games, married and
-              father of one boy.
+              I am well-organised person, responsible, and a problem solver. I am married and i
+              really enjoy spending time with my son, play some video games, and go to the gym.
             </p>
             <p>
               Enthusiast in the entire Front-end spectrum, capable of working as a Full-stack

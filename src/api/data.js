@@ -204,7 +204,7 @@ const projects = [
     id: 7,
     title: 'Statistics Dashboard',
     image: 'werking-dashboard.JPG',
-    small_description: "Web App with Werking's Self-service Kiosk stadistic records",
+    small_description: "Web App with Werking's Self-service Kiosk statistic records",
     description: 'Description',
     company: {
       name: 'Werking by Credicentro',
