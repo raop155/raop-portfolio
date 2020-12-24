@@ -17,6 +17,7 @@ const Header = ({ currentSection }) => {
               <a
                 className={currentSection === 'hero' ? 'nav-item active' : 'nav-item'}
                 href='#hero'
+                onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
@@ -25,6 +26,7 @@ const Header = ({ currentSection }) => {
               <a
                 className={currentSection === 'projects' ? 'nav-item active' : 'nav-item'}
                 href='#projects'
+                onClick={() => setIsMenuOpen(false)}
               >
                 Projects
               </a>
@@ -33,6 +35,7 @@ const Header = ({ currentSection }) => {
               <a
                 className={currentSection === 'about' ? 'nav-item active' : 'nav-item'}
                 href='#about'
+                onClick={() => setIsMenuOpen(false)}
               >
                 About
               </a>
@@ -41,6 +44,7 @@ const Header = ({ currentSection }) => {
               <a
                 className={currentSection === 'contact' ? 'nav-item active' : 'nav-item'}
                 href='#contact'
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </a>
