@@ -1,7 +1,8 @@
 import React from 'react';
 import DarkModeToggler from '../hero/DarkModeToggler';
+import PropTypes from 'prop-types';
 
-const Hero = (_, ref) => {
+const Hero = React.forwardRef((_, ref) => {
   return (
     <main id='hero'>
       <div className='container flex'>
@@ -22,6 +23,10 @@ const Hero = (_, ref) => {
       </div>
     </main>
   );
+});
+
+Hero.propTypes = {
+  _: PropTypes.any,
 };
 
-export default React.forwardRef(Hero);
+export default Hero;

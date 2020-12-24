@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import ProjectCard from '../projects/ProjectCard';
 import projects from '../../api/data';
 import ProjectsFilter from '../projects/ProjectsFilter';
+import PropTypes from 'prop-types';
 
-const Projects = (_, ref) => {
+const Projects = React.forwardRef((_, ref) => {
   const [filteredProjects, setfilteredProjects] = useState(projects);
 
   return (
@@ -22,6 +23,10 @@ const Projects = (_, ref) => {
       </div>
     </section>
   );
+});
+
+Projects.propTypes = {
+  _: PropTypes.any,
 };
 
-export default React.forwardRef(Projects);
+export default Projects;

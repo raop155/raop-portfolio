@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Contact = (_, ref) => {
+const Contact = React.forwardRef((_, ref) => {
   return (
     <section id='contact'>
       <div className='arrow-down'>
@@ -65,6 +66,10 @@ const Contact = (_, ref) => {
       </div>
     </section>
   );
+});
+
+Contact.propTypes = {
+  _: PropTypes.any,
 };
 
-export default React.forwardRef(Contact);
+export default Contact;

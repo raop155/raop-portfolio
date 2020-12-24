@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHamburger, faTimes } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const Header = ({ currentSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,6 +71,10 @@ const Header = ({ currentSection }) => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  currentSection: PropTypes.string.isRequired,
 };
 
 export default Header;

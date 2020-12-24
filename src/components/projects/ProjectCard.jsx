@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faStar, faHandPointUp } from '@fortawesome/free-solid-svg-icons';
 import ProjectGallery from './ProjectGallery';
+import PropTypes from 'prop-types';
 
 const ProjectCard = (props) => {
   const { project } = props;

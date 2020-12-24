@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const ProjectGallery = (props) => {
   const { id, title, setIsGalleryOpen, gallery } = props;
@@ -54,13 +55,16 @@ const ProjectGallery = (props) => {
             )}
           </div>
         </div>
-
-        {/* <button className='button-close' onClick={() => setIsGalleryOpen(false)}>
-          &times;
-        </button> */}
       </div>
     </div>
   );
+};
+
+ProjectGallery.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  setIsGalleryOpen: PropTypes.func.isRequired,
+  gallery: PropTypes.array.isRequired,
 };
 
 export default ProjectGallery;

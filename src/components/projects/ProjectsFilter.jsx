@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const filters = [
   { name: 'All' },
@@ -121,6 +122,12 @@ const ProjectsFilter = ({ projects, filteredProjects, setfilteredProjects }) => 
       </div>
     </div>
   );
+};
+
+ProjectsFilter.propTypes = {
+  projects: PropTypes.array.isRequired,
+  filteredProjects: PropTypes.array.isRequired,
+  setfilteredProjects: PropTypes.func.isRequired,
 };
 
 export default ProjectsFilter;

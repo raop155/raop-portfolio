@@ -14,8 +14,9 @@ import {
 import PDF from '../../assets/Resume.pdf';
 
 import { faFileCode, faCode, faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
-const About = (_, ref) => {
+const About = React.forwardRef((_, ref) => {
   return (
     <section id='about'>
       <div className='container flex'>
@@ -100,7 +101,6 @@ const About = (_, ref) => {
 
           <div className='skill'>
             <i>
-              {' '}
               <FontAwesomeIcon icon={faPhp} size='3x' />
             </i>
             <p>PHP</p>
@@ -159,6 +159,10 @@ const About = (_, ref) => {
       </div>
     </section>
   );
+});
+
+About.propTypes = {
+  _: PropTypes.any,
 };
 
-export default React.forwardRef(About);
+export default About;
