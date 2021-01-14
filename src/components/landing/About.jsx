@@ -31,7 +31,7 @@ const About = React.forwardRef((_, ref) => {
               for 8+ years.
             </p>
             <p>
-              I am well-organised person, responsible, and a problem solver. I am married and i
+              I am well-organised person, responsible, and a problem solver. I am married and I
               really enjoy spending time with my son, play some video games, and go to the gym.
             </p>
             <p>
