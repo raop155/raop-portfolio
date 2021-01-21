@@ -224,7 +224,6 @@ const projects = [
       },
     ],
   },
-
   {
     id: 8,
     title: 'Personal Portfolio',
@@ -256,7 +255,7 @@ const projects = [
       url: '#about',
       country: 'Perú',
     },
-    isFeatured: true,
+    isFeatured: false,
     isPrivate: false,
     live: {
       url: 'https://vibrant-gates-241c61.netlify.app/',
@@ -406,6 +405,26 @@ const projects = [
     },
     code: {
       url: 'https://github.com/raop155/mern_shopping_list',
+    },
+  },
+  {
+    id: 17,
+    title: '#HolaMundo #Challenges',
+    image: 'holamundo.JPG',
+    small_description: 'Multiple Challenges',
+    description: 'Multiple Challenges',
+    company: {
+      name: 'Ricardo Olarte',
+      url: '#about',
+      country: 'Perú',
+    },
+    isFeatured: true,
+    isPrivate: false,
+    live: {
+      url: 'https://happy-torvalds-0893e2.netlify.app/',
+    },
+    code: {
+      url: 'https://github.com/raop155/holamundo-challenges',
     },
   },
 ];
