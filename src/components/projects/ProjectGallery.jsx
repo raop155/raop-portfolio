@@ -17,6 +17,11 @@ const ProjectGallery = (props) => {
     setCurrentImageIndex((prev) => prev - 1);
   };
 
+  /**
+   * @type {string}
+   */
+  const name = 'name';
+
   return (
     <div className='project-gallery' data-testid='gallery'>
       <div className='container flex'>
