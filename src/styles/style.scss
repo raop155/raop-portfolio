@@ -315,7 +315,7 @@ img {
     letter-spacing: 2.5px;
     padding: 0 0.5em;
     margin: 0 0 0.5em 0;
-    font-size: 2.75rem;
+    font-size: 3rem;
     transition: box-shadow 550ms ease-out;
   }
 
@@ -329,9 +329,10 @@ img {
     margin: 0;
   }
 
-  i {
-    font-size: 0.8rem;
-    color: var(--gray-color);
+  .description {
+    font-size: 1rem;   
+    color: var(--gray-color); 
+    font-style: italic;
   }
 
   a {
@@ -380,7 +381,7 @@ img {
 
   @media (min-width: 415px) {
     h1 {
-      font-size: 3rem;
+      font-size: 4rem;
     }
 
     h1:hover {
@@ -389,11 +390,11 @@ img {
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
-    i {
-      font-size: 1rem;
+    .description {
+      font-size: 1.25rem;    
     }
   }
 }
@@ -437,7 +438,7 @@ img {
   .project-card {
     // background: #222;
     position: relative;
-    border-radius: 10px;
+    // border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     transition: transform 250ms;
