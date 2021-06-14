@@ -24,13 +24,6 @@ const About = React.forwardRef((_, ref) => {
         <div className='information flex'>
           <div className='description'>
             <p>
-              I am currently working as a Front-end Developer at{' '}
-              <a href='https://www.px-group.com/' rel='noreferrer' target='_blank'>
-                Px-Group
-              </a>{' '}
-              for 8+ years.
-            </p>
-            <p>
               I am well-organised person, responsible, and a problem solver. I am married and I
               really enjoy spending time with my son, play some video games, and go to the gym.
             </p>
