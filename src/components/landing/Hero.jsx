@@ -7,7 +7,7 @@ const Hero = React.forwardRef((_, ref) => {
     <main id='hero'>
       <div className='container flex'>
         <h1>I'm Ricardo</h1>
-        <p>Full Stack Developer</p>
+        <p>Front-end Developer</p>
         <p className="description">
             Passionate about applying the necessary technologies to improve
         </p>
